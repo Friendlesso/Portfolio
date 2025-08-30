@@ -1,0 +1,6 @@
+export function DesktopPage() {
+  return(
+    <>
+    </>
+  )
+}
