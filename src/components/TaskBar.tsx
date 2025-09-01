@@ -1,8 +1,16 @@
 import dayjs from "dayjs"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { TaskBarMenu } from "./TaskBarMenu";
 
 export function TaskBar() {
+
+  const [isShowing, setIsShowing] = useState<boolean>(false)
+  const startButtonRef = useRef<HTMLButtonElement>(null)
+
+  function handleStartClick() {
+    setIsShowing(prev => !prev)
+  }
+
   function Clock() {
     const [time, setTime] = useState<string>(dayjs().format('HH:mm dddd,DD,MMMM'));
 
@@ -29,11 +37,12 @@ export function TaskBar() {
     return <p>{time}</p>
   }
 
+
   return (
     <>
-    <TaskBarMenu />
-      <footer className="mt-auto w-full h-14 bg-[var(--taskbar-color)] flex  items-center justify-between px-14">
-        <button className="text-xl dual-border px-7 py-1.5">Start</button>
+    <TaskBarMenu isShowing={isShowing} onClose={() => setIsShowing(false)}  ignoreRef={startButtonRef} />
+      <footer className="mt-auto w-full h-14 bg-[var(--taskbar-color)] flex  items-center justify-between sm:px-14 px-5 border-t-2 border-white">
+        <button ref={startButtonRef} onClick={handleStartClick} className="text-xl dual-border px-7 py-1.5">Start</button>
         <div className="text-xl dual-border px-3.5 py-1.5">
           {Clock()}
         </div>

@@ -27,7 +27,7 @@ body {
   border-bottom-color: black;
 }
 
-.dual-border:focus {
+.dual-border:active{
   border-top-color: black;
   border-left-color: black;
   border-right-color: white;
