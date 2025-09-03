@@ -41,7 +41,7 @@ export function TaskBar() {
   return (
     <>
     <TaskBarMenu isShowing={isShowing} onClose={() => setIsShowing(false)}  ignoreRef={startButtonRef} />
-      <footer className="mt-auto w-full h-14 bg-[var(--taskbar-color)] flex  items-center justify-between sm:px-14 px-5 border-t-2 border-white">
+      <footer className="mt-auto w-full h-14 bg-[var(--taskbar-color)] flex  items-center justify-between px-3 border-t-2 border-white">
         <button ref={startButtonRef} onClick={handleStartClick} className="text-xl dual-border px-7 py-1.5">Start</button>
         <div className="text-xl dual-border px-3.5 py-1.5">
           {Clock()}
