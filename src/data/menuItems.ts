@@ -7,11 +7,11 @@ import gitHubImage from '../assets/images/icons/github.png'
 import gamesImage from '../assets/images/icons/games.png'
 
 export const menuItems = [
-  { icon: biographyImage, lable:'Biography' },
-  { icon: folderImage, lable:'Folder' },
-  { icon: ResumeImage, lable:'Resume' },
-  { icon: emailImage, lable:'Email' },
-  { icon: liveCodeImage, lable:'Live Code' },
-  { icon: gitHubImage, lable:'GitHub' },
-  { icon: gamesImage, lable:'Games' },
+  { icon: biographyImage, lable:'Biography', headerColor: 'bg-[var(--biography-header)]' },
+  { icon: folderImage, lable:'Folder', headerColor: 'bg-[var(--folder-header)]' },
+  { icon: ResumeImage, lable:'Resume', headerColor: 'bg-[var(--resume-header)]' },
+  { icon: emailImage, lable:'Email', headerColor: 'bg-[var(--email-header)]' },
+  { icon: liveCodeImage, lable:'Live Code', headerColor: 'bg-[var(--liveCode-header)]' },
+  { icon: gitHubImage, lable:'GitHub', headerColor: 'bg-[var(--github-header)]' },
+  { icon: gamesImage, lable:'Games', headerColor: 'bg-[var(--games-header)]' },
 ]

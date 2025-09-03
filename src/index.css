@@ -12,10 +12,29 @@
   --taskbar-color: #FFDDDF;
   --folder-background: #FFB7DE;
   --folder-box-color: #FDE1E1;
+
+  /* Colors for all window headers */
+  --biography-header: #9720F1;
+  --folder-header: #0089DA;
+  --resume-header: #F03C3F;
+  --email-header: #FF8A05;
+  --liveCode-header: #0089DA;
+  --github-header: #25292E;
+  --games-header: #009D0A;
+
 }
 
 body {
   font-family: 'TahomaXp';
+}
+
+.dual-border-folder {
+  border-width: 2px;
+  border-style: solid;
+  border-top-color: white;
+  border-left-color: white;
+  border-right-color: black;
+  border-bottom-color: black;
 }
 
 .dual-border {
@@ -27,7 +46,7 @@ body {
   border-bottom-color: black;
 }
 
-.dual-border:active{
+.dual-border:active {
   border-top-color: black;
   border-left-color: black;
   border-right-color: white;
