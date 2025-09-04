@@ -1,6 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
 import { TaskBar } from '../../components/TaskBar'
-import { ResumePage } from '../ResumePage'
 import { menuItems } from '../../data/menuItems'
 
 export function DesktopPage() {
@@ -21,10 +20,9 @@ export function DesktopPage() {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [selectedIndex])
 
-
   return (
     <>
-      <div className="flex flex-col h-screen w-screen bg-[var(--color-background)]">
+      <div className="flex flex-col h-screen w-screen bg-[var(--color-background)] relative">
         <section className='flex flex-col px-4 py-6 px5'>
           {menuItems.map((item, index) => (
             <div
@@ -36,16 +34,25 @@ export function DesktopPage() {
                 setOpenIndex(index)
                 setSelectedIndex(null)
               }}>
-              <img className='w-12 ' src={item.icon} alt={item.lable} />
+              <img className='w-12 ' src={item.icon} alt={item.label} />
               <p className={`text-lg mt-1 w-full text-center ${selectedIndex === index ? "border border-dashed border-white text-white bg-blue-700" : "text-black"}`}
-              >{item.lable}</p>
+              >{item.label}</p>
             </div>
           ))}
         </section>
-        <ResumePage
-          item={openIndex !== null ? menuItems[openIndex] : null}
-          onClose={() => setOpenIndex(null)}
-        />
+
+        {openIndex !== null && (() => {
+          const PageComponent = menuItems[openIndex].component
+          return (
+            <div className=' absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-fit h-fit'>
+              <PageComponent
+                item={menuItems[openIndex]}
+                onClose={() => setOpenIndex(null)}
+              />
+            </div>
+
+          )
+        })()}
         <TaskBar />
       </div>
     </>

@@ -22,6 +22,12 @@
   --github-header: #25292E;
   --games-header: #009D0A;
 
+  /* Colors for all tags in Biography Window */
+  --tag-basic: #FF8A05;
+  --tag-framework: #76B3E5;
+  --tag-backend: #469C4B;
+  --tag-tools: #585858;
+
 }
 
 body {

@@ -5,13 +5,59 @@ import emailImage from '../assets/images/icons/email.png'
 import liveCodeImage from '../assets/images/icons/livecode.png'
 import gitHubImage from '../assets/images/icons/github.png'
 import gamesImage from '../assets/images/icons/games.png'
+import { BioWindow } from '../pages/BioWindow'
+import { ResumeWindow } from '../pages/ResumeWindow'
+import { FolderPage } from '../pages/FolderPage'
+import type { ComponentType } from 'react'
 
-export const menuItems = [
-  { icon: biographyImage, lable:'Biography', headerColor: 'bg-[var(--biography-header)]' },
-  { icon: folderImage, lable:'Folder', headerColor: 'bg-[var(--folder-header)]' },
-  { icon: ResumeImage, lable:'Resume', headerColor: 'bg-[var(--resume-header)]' },
-  { icon: emailImage, lable:'Email', headerColor: 'bg-[var(--email-header)]' },
-  { icon: liveCodeImage, lable:'Live Code', headerColor: 'bg-[var(--liveCode-header)]' },
-  { icon: gitHubImage, lable:'GitHub', headerColor: 'bg-[var(--github-header)]' },
-  { icon: gamesImage, lable:'Games', headerColor: 'bg-[var(--games-header)]' },
+interface MenuItem {
+  label: string
+  icon: string
+  headerColor: string
+  component: ComponentType<{ item: MenuItem; onClose: () => void }>
+}
+
+export const menuItems: MenuItem[] = [
+  {
+    icon: biographyImage,
+    label: 'Biography',
+    headerColor: 'bg-[var(--biography-header)]',
+    component: BioWindow
+  },
+  {
+    icon: folderImage,
+    label: 'Folder',
+    headerColor: 'bg-[var(--folder-header)]',
+    component: FolderPage
+  },
+  {
+    icon: ResumeImage,
+    label: 'Resume',
+    headerColor: 'bg-[var(--resume-header)]',
+    component: ResumeWindow
+  },
+  {
+    icon: emailImage,
+    label: 'Email',
+    headerColor: 'bg-[var(--email-header)]',
+    component: ResumeWindow
+  },
+  {
+    icon: liveCodeImage,
+    label: 'Live Code',
+    headerColor: 'bg-[var(--liveCode-header)]',
+    component: ResumeWindow
+  },
+  {
+    icon: gitHubImage,
+    label: 'GitHub',
+    headerColor: 'bg-[var(--github-header)]',
+    component: ResumeWindow
+  },
+  {
+    icon: gamesImage,
+    label: 'Games',
+    headerColor: 'bg-[var(--games-header)]',
+    component: ResumeWindow
+  },
 ]
