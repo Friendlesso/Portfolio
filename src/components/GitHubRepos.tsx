@@ -34,15 +34,15 @@ export function GitHubRepos() {
 
   return (
     <section>
-      <h3>Projects</h3>
+      <p className="text-3xl underline">Projects</p>
       {repos.map((repo: any) => (
         <div key={repo.id}>
-          <div>
+          <div className="flex justify-between items-center">
             <p className="text-2xl">{repo.name}</p>
-            <a href="">{}</a>
+            {repo.name === 'TickIt' ? <a href='https://tickit-5qi1.onrender.com/' target="_blank" rel="noopener noreferrer" className="dual-border" >View app</a>  : <a className="dual-border">View in file</a>  }
           </div>
           <div>
-            <p className="text-lg">{repo.description}</p>
+            <p className="text-lg text-[var(--text-gray)]">{repo.description}</p>
           </div>
         </div>
       ))}

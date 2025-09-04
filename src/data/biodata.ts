@@ -1,10 +1,13 @@
+import profilePicture from '../assets/images/MihailoPicture.jpg'
+import locationIcon from '../assets/images/icons/world.png'
+
 export const bioData = {
   name: 'Mihailo Djurovic',
-  picture: '../assets/images/MihailoPicture.jpg',
+  picture: profilePicture,
   role: 'Junior web developer',
   location: {
-    country: 'serbia',
-    icon: ''
+    country: 'Serbia',
+    icon: locationIcon
   },
   tags: [
     { label: 'HTML5/CSS3', color: 'bg-[var(--tag-basic)]' },
