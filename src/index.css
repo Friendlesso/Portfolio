@@ -31,8 +31,9 @@
 
   /* Colors for GitHub Page */
   --github-background: #0D1117;
-  --github-username: #515151;
+  --github-gray-text: #515151;
   --github-view-button: #212830;
+  --github-border: #212830;
 
 }
 
