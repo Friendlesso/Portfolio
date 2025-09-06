@@ -5,6 +5,7 @@ type Repo = {
   name: string;
   description: string;
   language: string;
+  html_url: string;
 }
 
 export function GitHubRepos() {
@@ -27,7 +28,7 @@ export function GitHubRepos() {
           <p className="text-[var(--github-gray-text)] text-lg">{repo.description}</p>
           <div className="flex justify-between items-center mt-auto">
             <p> {repo.language}</p>
-            <a href="" className="px-3 rounded-sm text-lg bg-[var(--github-view-button)]">View code</a>
+            <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="px-5 rounded-sm text-lg bg-[var(--github-view-button)]">View code</a>
           </div>
         </div>
       ))}

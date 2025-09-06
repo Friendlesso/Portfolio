@@ -18,9 +18,9 @@ export function Projects() {
 
   return (
     <section>
-      <p className="text-3xl underline">Projects</p>
+      <p className="text-3xl underline mb-2.5">Projects</p>
       {repos.map((repo) => (
-        <div key={repo.id}>
+        <div key={repo.id} className="mb-5">
           <div className="flex justify-between items-center">
             <p className="text-2xl">{repo.name}</p>
             {repo.name === 'TickIt' ? <a href='https://tickit-5qi1.onrender.com/' target="_blank" rel="noopener noreferrer" className="dual-border" >View app</a> : <a className="dual-border">View in file</a>}

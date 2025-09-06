@@ -22,7 +22,7 @@ export function GithubProfile() {
   if (!profile) return <p>No profile data.</p>;
 
   return (
-    <section className="flex w-full border-b-2 border-[var(--github-view-button)]  pb-5">
+    <section className="flex w-full border-b-2 border-[var(--github-view-button)] lg:mr-4   pb-5">
       <div className="w-full">
         <div className="flex flex-row items-center lg:items-start lg:flex-col my-5">
           <div>
@@ -35,7 +35,8 @@ export function GithubProfile() {
           </div>
         </div>
         <div className="flex w-full mt-2 ">
-          <a href=""
+          <a href="https://github.com/Friendlesso"
+            target="_blank" rel="noopener noreferrer"
             className="
             bg-[var(--github-view-button)]
             text-white text-xl w-full
