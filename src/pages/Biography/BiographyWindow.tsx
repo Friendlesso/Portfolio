@@ -1,16 +1,16 @@
-import { GitHubRepos } from "../../components/GitHubRepos"
+import { Projects} from "./Projects"
 import { WindowHeader } from "../../components/WindowHeader"
 import { AboutMe } from "./AboutMe"
 import { TechStack } from "./TechStack"
 import { Profile } from "./Profile"
-import type { menuItems } from "../../data/menuItems"
+import type { menuItems } from "../../data/desktopItems"
 
-interface BioWindowProps {
+interface BiographyWindowProps {
   item: typeof menuItems[0] | null
   onClose: () => void
 }
 
-export function BioWindow({ item, onClose }: BioWindowProps) {
+export function BiographyWindow({ item, onClose }: BiographyWindowProps) {
   if (!item) return
   return (
     <div className="dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col h-[80vh] w-sm sm:w-2xl lg:w-4xl ">
@@ -19,7 +19,7 @@ export function BioWindow({ item, onClose }: BioWindowProps) {
         <Profile />
         <TechStack />
         <AboutMe />
-        <GitHubRepos />
+        <Projects />
       </div>
     </div>
   )

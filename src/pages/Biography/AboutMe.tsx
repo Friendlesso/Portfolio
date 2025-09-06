@@ -1,4 +1,4 @@
-import { bioData } from "../../data/biodata"
+import { bioData } from "../../data/biographyData"
 
 export function AboutMe() {
   return(

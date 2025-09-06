@@ -1,4 +1,4 @@
-import { menuItems } from "../data/menuItems"
+import { menuItems } from "../data/desktopItems"
 import { WindowHeader } from "../components/WindowHeader"
 import resumePdf from "../assets/files/Mihailo-Djurovic .pdf"
 

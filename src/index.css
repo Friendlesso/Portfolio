@@ -29,6 +29,11 @@
   --tag-backend: #469C4B;
   --tag-tools: #585858;
 
+  /* Colors for GitHub Page */
+  --github-background: #0D1117;
+  --github-username: #515151;
+  --github-view-button: #212830;
+
 }
 
 body {

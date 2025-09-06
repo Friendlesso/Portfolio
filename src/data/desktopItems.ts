@@ -5,9 +5,10 @@ import emailImage from '../assets/images/icons/email.png'
 import liveCodeImage from '../assets/images/icons/livecode.png'
 import gitHubImage from '../assets/images/icons/github.png'
 import gamesImage from '../assets/images/icons/games.png'
-import { BioWindow } from '../pages/Bio/BioWindow'
+import { BiographyWindow } from '../pages/Biography/BiographyWindow'
 import { ResumeWindow } from '../pages/ResumeWindow'
 import { FolderPage } from '../pages/FolderPage'
+import { GitHubWindow } from '../pages/GitHub/GitHubWindow'
 import type { ComponentType } from 'react'
 
 interface MenuItem {
@@ -22,7 +23,7 @@ export const menuItems: MenuItem[] = [
     icon: biographyImage,
     label: 'Biography',
     headerColor: 'bg-[var(--biography-header)]',
-    component: BioWindow
+    component: BiographyWindow
   },
   {
     icon: folderImage,
@@ -52,7 +53,7 @@ export const menuItems: MenuItem[] = [
     icon: gitHubImage,
     label: 'GitHub',
     headerColor: 'bg-[var(--github-header)]',
-    component: ResumeWindow
+    component: GitHubWindow
   },
   {
     icon: gamesImage,
