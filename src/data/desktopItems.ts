@@ -10,6 +10,7 @@ import { ResumeWindow } from '../pages/ResumeWindow'
 import { FolderPage } from '../pages/FolderPage'
 import { GitHubWindow } from '../pages/GitHub/GitHubWindow'
 import type { ComponentType } from 'react'
+import { EmailWindow } from '../pages/Email/EmailWindow'
 
 interface MenuItem {
   label: string
@@ -41,7 +42,7 @@ export const menuItems: MenuItem[] = [
     icon: emailImage,
     label: 'Email',
     headerColor: 'bg-[var(--email-header)]',
-    component: ResumeWindow
+    component: EmailWindow
   },
   {
     icon: liveCodeImage,

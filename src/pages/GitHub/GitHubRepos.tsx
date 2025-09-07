@@ -23,11 +23,11 @@ export function GitHubRepos() {
         <div key={repo.id} className="border-2 flex flex-col border-[var(--github-border)]  min-h-[250px] mb-4 p-2">
           <div className="flex justify-between items-center">
             <p className="text-2xl">{repo.name}</p>
-            <p className="border-2 px-5 rounded-sm border-[var(--github-border)]">Public</p>
+            <p className="border-2 text-lg px-5 rounded-sm border-[var(--github-border)]">Public</p>
           </div>
           <p className="text-[var(--github-gray-text)] text-lg">{repo.description}</p>
           <div className="flex justify-between items-center mt-auto">
-            <p> {repo.language}</p>
+            <p className="text-lg"> {repo.language}</p>
             <a href={repo.html_url} target="_blank" rel="noopener noreferrer" className="px-5 rounded-sm text-lg bg-[var(--github-view-button)]">View code</a>
           </div>
         </div>

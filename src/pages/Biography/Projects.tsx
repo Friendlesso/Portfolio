@@ -16,20 +16,32 @@ export function Projects() {
   if (error) return <p>Error fetching repos: {error}</p>
   if (!repos) return <p>No repos found.</p>
 
+
   return (
     <section>
       <p className="text-3xl underline mb-2.5">Projects</p>
-      {repos.map((repo) => (
-        <div key={repo.id} className="mb-5">
-          <div className="flex justify-between items-center">
-            <p className="text-2xl">{repo.name}</p>
-            {repo.name === 'TickIt' ? <a href='https://tickit-5qi1.onrender.com/' target="_blank" rel="noopener noreferrer" className="dual-border" >View app</a> : <a className="dual-border">View in file</a>}
+      {repos.map((repo) => {
+        const link = repo.name === "TickIt"
+          ? "https://tickit-5qi1.onrender.com/"
+          : repo.html_url;
+        const text = repo.name === "TickIt"
+          ? "View app"
+          : "View In file";
+        return (
+          <div key={repo.id} className="mb-5">
+            <div className="flex justify-between items-center">
+              <p className="text-2xl">{repo.name}</p>
+              <a href={link}
+                rel="noopener noreferrer" target="_blank"
+                className="dual-border px-5"
+              >{text}</a>
+            </div>
+            <div>
+              <p className="text-lg text-[var(--text-gray)]">{repo.description}</p>
+            </div>
           </div>
-          <div>
-            <p className="text-lg text-[var(--text-gray)]">{repo.description}</p>
-          </div>
-        </div>
-      ))}
+        )
+      })}
     </section>
   )
 

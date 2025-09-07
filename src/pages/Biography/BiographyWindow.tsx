@@ -15,7 +15,7 @@ export function BiographyWindow({ item, onClose }: BiographyWindowProps) {
   return (
     <div className="dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col h-[80vh] w-sm sm:w-2xl lg:w-4xl ">
       <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} />
-      <div className="bg-[var(--folder-box-color)] px-4 sm:px-6 lg:px-12 overflow-y-auto">
+      <div className="bg-[var(--folder-box-color)] dual-border-inner mt-1 px-4 sm:px-6 lg:px-12 overflow-y-auto">
         <Profile />
         <TechStack />
         <AboutMe />
