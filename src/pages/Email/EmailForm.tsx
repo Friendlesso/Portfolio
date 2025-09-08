@@ -17,23 +17,22 @@ export function EmailForm() {
     const serviceId = 'service_k3iv05n';
     const templateId = 'template_uc88gcv';
     const publicKey = 'GwvmCVx2YS4SL1sLV';
-    const autoReplyTemplate = 'template_uc88gcv'
+    const autoReplyTemplate = 'template_zq2fom9'
 
     const templateParams = {
-      from_name: name,
-      from_email: email,
+      name: name,
+      email: email,
       message,
       to_Name: 'Mihailo'
     }
 
     emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .catch((error) => {
-        console.log('Error sending email:', error)
+      .then(() => {
+        return emailjs.send(serviceId, autoReplyTemplate, templateParams, publicKey);
       })
-      emailjs.send(serviceId, autoReplyTemplate, templateParams, publicKey)
       .catch((error) => {
-        console.log('Auto-reply failed', error)
-      })
+        console.error('Email error:', error);
+      });
   }
 
   return (
