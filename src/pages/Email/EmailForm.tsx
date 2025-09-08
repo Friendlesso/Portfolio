@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, type FormEvent } from 'react'
 import emailjs from '@emailjs/browser'
 import EmailSend from '../../assets/images/icons/EmailSend.svg'
 
@@ -8,7 +8,7 @@ export function EmailForm() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     setName('');
     setEmail('');
