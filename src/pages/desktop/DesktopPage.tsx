@@ -7,6 +7,13 @@ export function DesktopPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
   const iconRef = useRef<(HTMLDivElement | null)[]>([]);
 
+  const handleOpenItem = (label: string) => {
+    const index = menuItems.findIndex(item => item.label === label);
+    if (index !== -1) {
+      setOpenIndex(index)
+    }
+  }
+
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (selectedIndex === null) return
@@ -53,7 +60,12 @@ export function DesktopPage() {
 
           )
         })()}
-        <TaskBar />
+        <TaskBar
+          item={openIndex !== null ? menuItems[openIndex] : null}
+          onClose={() => setOpenIndex(null)}
+          onOpenItem={handleOpenItem}
+        />
+
       </div>
     </>
   )
