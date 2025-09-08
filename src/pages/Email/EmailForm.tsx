@@ -17,6 +17,7 @@ export function EmailForm() {
     const serviceId = 'service_k3iv05n';
     const templateId = 'template_uc88gcv';
     const publicKey = 'GwvmCVx2YS4SL1sLV';
+    const autoReplyTemplate = 'template_uc88gcv'
 
     const templateParams = {
       from_name: name,
@@ -28,6 +29,10 @@ export function EmailForm() {
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .catch((error) => {
         console.log('Error sending email:', error)
+      })
+      emailjs.send(serviceId, autoReplyTemplate, templateParams, publicKey)
+      .catch((error) => {
+        console.log('Auto-reply failed', error)
       })
   }
 
