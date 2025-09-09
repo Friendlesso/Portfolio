@@ -35,7 +35,7 @@ export function TaskBarMenu({ isShowing, onClose, ignoreRef, onOpenItem }: TaskB
   return (
     <>
       {isShowing && (
-        <nav ref={navRef} className="flex absolute bottom-14 bg-[var(--folder-box-color)] w-fit p-2" aria-label='Taskbar Menu'>
+        <nav ref={navRef} className="flex absolute bottom-14 left-0 bg-[var(--folder-box-color)] w-fit p-2" aria-label='Taskbar Menu'>
           <div>
             <img src={windowsLable} alt="Windows94 lable" />
           </div>

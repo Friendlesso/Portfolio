@@ -29,8 +29,9 @@ export function DesktopPage() {
 
   return (
     <>
-      <div className="flex flex-col h-screen w-screen bg-[var(--color-background)] relative">
-        <section className='flex flex-col px-4 py-6 px5'>
+      <div className="flex flex-col h-screen w-screen bg-[var(--color-background)]">
+        <section className='flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 pt-6'
+          style={{ height: 'calc(100vh - 3.5rem)' }}>
           {menuItems.map((item, index) => (
             <div
               ref={(el) => { iconRef.current[index] = el }}
@@ -60,11 +61,14 @@ export function DesktopPage() {
 
           )
         })()}
-        <TaskBar
-          item={openIndex !== null ? menuItems[openIndex] : null}
-          onClose={() => setOpenIndex(null)}
-          onOpenItem={handleOpenItem}
-        />
+        <div className='fixed bottom-0 left-0 w-full'>
+          <TaskBar
+            item={openIndex !== null ? menuItems[openIndex] : null}
+            onClose={() => setOpenIndex(null)}
+            onOpenItem={handleOpenItem}
+          />
+        </div>
+
 
       </div>
     </>
