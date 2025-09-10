@@ -18,7 +18,7 @@ export function GitHubRepos() {
   if (!repos) return <p>No repos Found</p>
 
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 m-5">
+    <section className="grid grid-cols-1 min-[1600px]:grid-cols-2 gap-4 m-5">
       {repos.map((repo) => (
         <div key={repo.id} className="border-2 flex flex-col border-[var(--github-border)]  min-h-[250px] mb-4 p-2">
           <div className="flex justify-between items-center">

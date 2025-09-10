@@ -52,14 +52,14 @@ export function TaskBarMenu({ isShowing, onClose, ignoreRef, onOpenItem }: TaskB
               <img className="w-8" src={gitHubImage} alt="" />
               <p className='text-xl pl-4'>GitHub</p>
             </a>
-            <a className="flex items-center pl-2 pr-4 py-2 border-t-2 border-t-white hover:bg-[var(--folder-background)]"
+            <button className="flex items-center pl-2 pr-4 py-2 border-t-2 border-t-white hover:bg-[var(--folder-background)] cursor-pointer"
               onClick={() => {
                 onOpenItem("Resume");
                 onClose()
               }}>
               <img className="w-8" src={resumeImage} alt="" />
               <p className='text-xl pl-4'>Resume</p>
-            </a>
+            </button>
           </div>
         </nav>
       )}

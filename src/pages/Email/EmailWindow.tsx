@@ -8,7 +8,7 @@ interface EmailWindowProps {
 export function EmailWindow({ item, onClose }: EmailWindowProps) {
   if (!item) return;
   return (
-    <div className="dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col h-[50vh] w-sm sm:w-2xl ">
+    <div className="dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col h-[50vh] w-fit min-w-[450px] max-w-[950px] ">
       <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} />
       <EmailForm />
     </div>

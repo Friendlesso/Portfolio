@@ -5,7 +5,7 @@ import { menuItems } from '../../data/desktopItems'
 export function DesktopPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [openIndex, setOpenIndex] = useState<number | null>(null)
-  const iconRef = useRef<(HTMLDivElement | null)[]>([]);
+  const iconRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   const handleOpenItem = (label: string) => {
     const index = menuItems.findIndex(item => item.label === label);
@@ -33,7 +33,7 @@ export function DesktopPage() {
         <section className='flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 pt-6'
           style={{ height: 'calc(100vh - 3.5rem)' }}>
           {menuItems.map((item, index) => (
-            <div
+            <button
               ref={(el) => { iconRef.current[index] = el }}
               key={index}
               className={`flex flex-col items-center mb-6 w-15 cursor-pointer ${selectedIndex === index ? "bg-blue-700" : ""}`}
@@ -41,11 +41,18 @@ export function DesktopPage() {
               onDoubleClick={() => {
                 setOpenIndex(index)
                 setSelectedIndex(null)
-              }}>
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  setOpenIndex(index)
+                }
+              }}
+            >
+
               <img className='w-12 ' src={item.icon} alt={item.label} />
               <p className={`text-lg mt-1 w-full text-center ${selectedIndex === index ? "border border-dashed border-white text-white bg-blue-700" : "text-black"}`}
               >{item.label}</p>
-            </div>
+            </button>
           ))}
         </section>
 

@@ -50,7 +50,7 @@ export function TaskBar({ item, onOpenItem }: TaskBarProps) {
 
       <footer className=" w-full relative h-14 bg-[var(--taskbar-color)] flex  items-center justify-between px-3 border-t-2 border-white">
         <button ref={startButtonRef} onClick={handleStartClick} className="text-xl dual-border px-7 py-1.5">Start</button>
-        <div className="text-xl dual-border px-3.5 py-1.5 pointer-events-none">
+        <div className="text-xl dual-border px-3.5 py-1.5">
           {Clock()}
           <TaskBarMenu
             isShowing={isShowing}
