@@ -14,7 +14,7 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
   return (
     <div className="dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col h-[70vh] w-fit min-w-[550px] max-w-[950px] ">
       <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} />
-      <div className="bg-[var(--folder-box-color)] px-3 overflow-y-auto">
+      <div className="bg-[var(--folder-box-color)] px-3">
         <FileMenuBar />
       </div>
       <div>

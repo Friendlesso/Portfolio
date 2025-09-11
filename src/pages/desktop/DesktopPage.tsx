@@ -79,6 +79,7 @@ export function DesktopPage() {
 
           )
         })()}
+
         <div className='fixed bottom-0 left-0 w-full'>
           <TaskBar
             item={openIndex !== null ? menuItems[openIndex] : null}
