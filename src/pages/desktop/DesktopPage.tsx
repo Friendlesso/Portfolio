@@ -4,7 +4,10 @@ import { menuItems } from '../../data/desktopItems'
 
 export function DesktopPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(() => {
+    const saved = localStorage.getItem("openIndex");
+    return saved !== null ? Number(saved) : null;
+  });
   const iconRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   const handleOpenItem = (label: string) => {
@@ -13,6 +16,14 @@ export function DesktopPage() {
       setOpenIndex(index)
     }
   }
+
+  useEffect(() => {
+    if (openIndex !== null) {
+      localStorage.setItem("openIndex", String(openIndex))
+    } else {
+      localStorage.removeItem("openIndex");
+    }
+  }, [openIndex])
 
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
