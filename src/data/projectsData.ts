@@ -1,16 +1,19 @@
 import FolderImage from '../assets/images/icons/folder_closed.png'
 
-export interface ProjectFeatures {
-  description: string;
+export interface TechCategory {
+  label: string;
+  color: string;
 }
 export interface ProjectItem {
   name: string;
   size: number;
+  headerColor: string;
   description: string;
   learnings: string;
   video: string;
   icon: string;
-  features?: ProjectFeatures[];
+  features: string;
+  techStack?: TechCategory[];
 }
 
 export interface ProjectData {
@@ -23,6 +26,7 @@ export const ProjectItems: ProjectData = {
     {
       name: "TickIt",
       size: 9685,
+      headerColor: '--folder-header',
       description: `TickIt is a lightweight and intuitive to-do app designed for effortless task management. With a clean, responsive interface, it allows you to quickly add, complete, and remove tasks — helping you stay organized and focused without unnecessary clutter.`,
       video: '',
       icon: FolderImage,
@@ -33,8 +37,15 @@ export const ProjectItems: ProjectData = {
 
         Through this project, I learned a lot about MongoDB, Node.js, and Tailwind, and I gained practical experience in structuring a full-stack application and handling real-world challenges.
       `,
-      features: [{
-        description: `
+      techStack: [
+        { label: 'HTML5/CSS3', color: 'bg-[var(--tag-basic)]' },
+        { label: 'JavaScript(ES6+)', color: 'bg-[var(--tag-basic)]' },
+        { label: 'Tailwind CSS', color: 'bg-[var(--tag-framework)]' },
+        { label: 'Node.js', color: 'bg-[var(--tag-backend)]' },
+        { label: 'MonogDB', color: 'bg-[var(--tag-backend)]' },
+        { label: 'Express', color: 'bg-[var(--tag-backend)]' },
+      ],
+      features: `
           Add Tasks - Quickly create new tasks with a simple input.
 
           Mark as Complete - Keep track of progress by checking off finished tasks.
@@ -48,12 +59,12 @@ export const ProjectItems: ProjectData = {
           Dark Mode – Easily switch between light and dark themes for a comfortable viewing experience.
 
           Fast & Minimal - Lightweight interface with no distractions.`
-      }]
     },
 
     {
       name: "Portfolio",
       size: 1475,
+      headerColor: '',
       description: '',
       video: '',
       icon: FolderImage,
@@ -66,6 +77,7 @@ export const ProjectItems: ProjectData = {
     {
       name: "Suzu-no-Shiori",
       size: 323,
+      headerColor: '',
       description: '',
       video: '',
       icon: FolderImage,
@@ -78,6 +90,7 @@ export const ProjectItems: ProjectData = {
     {
       name: "HyoriDyori",
       size: 419,
+      headerColor: '',
       description: '',
       video: '',
       icon: FolderImage,

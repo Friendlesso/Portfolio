@@ -1,13 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
 import { TaskBar } from '../../components/TaskBar'
 import { menuItems } from '../../data/desktopItems'
-
 export function DesktopPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [openIndex, setOpenIndex] = useState<number | null>(() => {
     const saved = localStorage.getItem("openIndex");
     return saved !== null ? Number(saved) : null;
   });
+
   const iconRef = useRef<(HTMLButtonElement | null)[]>([]);
 
   const handleOpenItem = (label: string) => {
@@ -76,7 +76,6 @@ export function DesktopPage() {
                 onClose={() => setOpenIndex(null)}
               />
             </div>
-
           )
         })()}
 
