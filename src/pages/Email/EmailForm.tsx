@@ -36,7 +36,7 @@ export function EmailForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='flex flex-col h-[60vh] w-full'>
+    <form onSubmit={handleSubmit} className='flex flex-col h-full w-full'>
 
       <section className='bg-[var(--folder-box-color)] dual-border-inner mt-1 px-2 py-1 sm:px-3 lg:px-6 overflow-y-auto'>
         <button type='submit' className='flex text-xl px-2 items-center dual-border-folder cursor-pointer'>

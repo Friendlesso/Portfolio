@@ -7,9 +7,12 @@ interface WindowHeaderProps {
   icon: string
   bgColor: string
   onClose: () => void
+  isMaximized?: boolean
+  onMaximize?: () => void
+  disableMaximize?: boolean
 }
 
-export function WindowHeader({ label, icon, bgColor, onClose }: WindowHeaderProps) {
+export function WindowHeader({ label, icon, bgColor, onClose, onMaximize, disableMaximize }: WindowHeaderProps) {
   return (
     <header className={`flex justify-between items-center w-full px-2 ${bgColor}`}>
       <div className="flex items-center py-2">
@@ -17,10 +20,11 @@ export function WindowHeader({ label, icon, bgColor, onClose }: WindowHeaderProp
         <p className="text-xl pl-2 text-white">{label}</p>
       </div>
       <div className="flex">
-        <button className="dual-border  bg-[var(--folder-box-color)] w-6 h-6">
+        <button className="dual-border sm:pointer-none  bg-[var(--folder-box-color)] w-6 h-6">
           <img src={minimizeIcon} alt="" className="w-fit" />
         </button>
-        <button className="dual-border p-0.5 bg-[var(--folder-box-color)] w-6 h-6">
+        <button className={`dual-border p-0.5 bg-[var(--folder-box-color)] w-6 h-6 ${disableMaximize ? 'opacity-50 cursor-not-allowed ' : ''}`}
+          onClick={onMaximize}>
           <img src={maximizeIcon} alt="" className="w-fit" />
         </button>
         <button onClick={onClose} className="dual-border p-0.5 bg-[var(--folder-box-color)] w-6 h-6">

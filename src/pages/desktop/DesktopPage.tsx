@@ -79,13 +79,13 @@ export function DesktopPage() {
           )
         })()}
 
-        <div className='fixed bottom-0 left-0 w-full'>
+        <footer className='fixed bottom-0 left-0 w-full'>
           <TaskBar
             item={openIndex !== null ? menuItems[openIndex] : null}
             onClose={() => setOpenIndex(null)}
             onOpenItem={handleOpenItem}
           />
-        </div>
+        </footer>
 
 
       </div>
