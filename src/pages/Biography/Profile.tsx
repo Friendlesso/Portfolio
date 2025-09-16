@@ -1,8 +1,8 @@
 import { bioData } from "../../data/biographyData"
 export function Profile(){
   return(
-    <section className="mt-5">
-      <div>
+    <section className="mt-5 flex flex-col justify-center max-w-fit">
+      <div className="flex flex-col items-center">
         <img src={bioData.picture} alt="" />
       </div>
         <p className="text-4xl">{bioData.name}</p>
