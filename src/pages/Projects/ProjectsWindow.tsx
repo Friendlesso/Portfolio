@@ -6,6 +6,7 @@ import { ToolBar } from "../../components/ToolBar"
 import { ProjectItems, type ProjectItem } from "../../data/projectsData";
 import { useState } from "react"
 import { ProjectPage } from "./ProjectPage"
+import { useMaximizable } from "../../hooks/useMaximizable"
 
 interface FolderPageProps {
   item: typeof menuItems[0] | null
@@ -15,14 +16,18 @@ interface FolderPageProps {
 export function FolderPage({ item, onClose }: FolderPageProps) {
   const [openProject, setOpenProject] = useState<ProjectItem | null>(null);
 
+  const { isMaximized, toggleMaximized, isSmallScreen } = useMaximizable();
+
   if (!item) return null
 
 
   return (
 
     <>
-      <div className="dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col h-[70vh] w-fit min-w-[550px] max-w-[950px] ">
-        <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} />
+      <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
+          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[70vh] w-fit" }
+        `}>
+        <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
         <div className="bg-[var(--folder-box-color)] px-3">
           <FileMenuBar />
         </div>

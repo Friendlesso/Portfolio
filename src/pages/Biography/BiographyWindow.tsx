@@ -21,7 +21,7 @@ export function BiographyWindow({ item, onClose }: BiographyWindowProps) {
       ${isMaximized ? 'w-[100vw] h-[100vh] pb-15' : 'h-[80vh] w-fit min-w-[350px] max-w-[950px]'}
     `}>
       <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
-      <div className={`flex-1 flex-col justify-center bg-[var(--folder-box-color)] dual-border-inner mt-1 px-6 sm:px-8 lg:px-12 overflow-y-auto `}>
+      <div className="flex flex-1 flex-col items-center bg-[var(--folder-box-color)] dual-border-inner mt-1 px-6 sm:px-8 lg:px-12 overflow-y-auto">
         <div className="w-full flex flex-col items-center max-w-[1000px]">
           <Profile />
           <TechStack />
