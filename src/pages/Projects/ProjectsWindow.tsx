@@ -15,17 +15,21 @@ interface FolderPageProps {
 
 export function FolderPage({ item, onClose }: FolderPageProps) {
   const [openProject, setOpenProject] = useState<ProjectItem | null>(null);
-
   const { isMaximized, toggleMaximized, isSmallScreen } = useMaximizable();
 
   if (!item) return null
 
-
+  if (openProject) {
+    return (
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+        <ProjectPage project={openProject} onClose={() => setOpenProject(null)} />
+      </div>
+    )
+  }
   return (
-
     <>
       <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[70vh] w-fit" }
+          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[70vh] w-fit"}
         `}>
         <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
         <div className="bg-[var(--folder-box-color)] px-3">
@@ -55,13 +59,6 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
           </div>
         </section>
       </div>
-
-      {openProject && (
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <ProjectPage project={openProject} onClose={() => setOpenProject(null)} />
-        </div>
-      )}
     </>
-
   )
 }
