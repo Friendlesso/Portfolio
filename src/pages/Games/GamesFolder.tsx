@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { AdressBar } from "../../components/AdressBar"
 import { FileMenuBar } from "../../components/FileMenuBar"
 import { ToolBar } from "../../components/ToolBar"
@@ -12,7 +13,7 @@ interface GamesFolderProps {
 }
 
 export function GamesFolder({ item, onClose }: GamesFolderProps) {
-
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const { isMaximized, toggleMaximized, isSmallScreen } = useMaximizable();
 
   if (!item) return null
@@ -38,7 +39,12 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
         <section className="bg-[var(--folder-box-color)] flex-1 dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
           <div className=" flex">
             {games.map((game, index) => (
-              <button key={index} className="flex flex-col justify-between items-center mr-4">
+              <button
+                key={index}
+                onClick={() => {
+                  setOpenIndex(index)
+                }}
+                className="flex flex-col justify-between items-center mr-4">
                 <img src={game.icon} className="w-10" alt="" />
                 <p>{game.name}</p>
               </button>
@@ -46,6 +52,14 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
           </div>
         </section>
       </div>
+      {openIndex !== null && (() => {
+        const GameComponent = games[openIndex].component;
+        return (
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <GameComponent onClose={() => setOpenIndex(null)} />
+          </div>
+        )
+      })()}
     </>
   )
 }
