@@ -60,7 +60,7 @@ export function DesktopPage() {
               }}
             >
 
-              <img className='w-12 ' src={item.icon} alt={item.label} />
+              <img className='w-12 ' loading='lazy' src={item.icon} alt={item.label} />
               <p className={`text-lg mt-1 w-full text-center ${selectedIndex === index ? "border border-dashed border-white text-white bg-blue-700" : "text-black"}`}
               >{item.label}</p>
             </button>

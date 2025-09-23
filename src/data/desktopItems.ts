@@ -11,6 +11,7 @@ import { FolderPage } from '../pages/Projects/ProjectsWindow'
 import { GitHubWindow } from '../pages/GitHub/GitHubWindow'
 import type { ComponentType } from 'react'
 import { EmailWindow } from '../pages/Email/EmailWindow'
+import { GamesFolder } from '../pages/Games/GamesFolder'
 
 interface MenuItem {
   label: string
@@ -60,6 +61,6 @@ export const menuItems: MenuItem[] = [
     icon: gamesImage,
     label: 'Games',
     headerColor: 'bg-[var(--games-header)]',
-    component: ResumeWindow
+    component: GamesFolder
   },
 ]

@@ -3,7 +3,7 @@ export function Profile(){
   return(
     <section className="mt-5 flex flex-col justify-center max-w-fit">
       <div className="flex flex-col items-center">
-        <img src={bioData.picture} alt="" />
+        <img src={bioData.picture} loading="lazy" alt="" />
       </div>
         <p className="text-4xl">{bioData.name}</p>
         <div className="flex justify-between mt-3">
