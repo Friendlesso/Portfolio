@@ -12,6 +12,7 @@ import { GitHubWindow } from '../pages/GitHub/GitHubWindow'
 import type { ComponentType } from 'react'
 import { EmailWindow } from '../pages/Email/EmailWindow'
 import { GamesFolder } from '../pages/Games/GamesFolder'
+import { LiveCodeWindow } from '../pages/LiveCode/LiveCodeWindow'
 
 interface MenuItem {
   label: string
@@ -29,7 +30,7 @@ export const menuItems: MenuItem[] = [
   },
   {
     icon: folderImage,
-    label: 'Folder',
+    label: 'Projects',
     headerColor: 'bg-[var(--folder-header)]',
     component: FolderPage
   },
@@ -49,7 +50,7 @@ export const menuItems: MenuItem[] = [
     icon: liveCodeImage,
     label: 'Live Code',
     headerColor: 'bg-[var(--liveCode-header)]',
-    component: ResumeWindow
+    component: LiveCodeWindow
   },
   {
     icon: gitHubImage,
