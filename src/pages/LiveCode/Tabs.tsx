@@ -9,7 +9,8 @@ export function Tabs({ activeTab,onTabChange}: TabsProps) {
 
   const tabs = [
     { label: "index.html", value: "html"},
-    { label: "Style.css", value: "css"},
+    { label: "style.css", value: "css"},
+    { label: "script.js", value: "js"},
   ];
 
   return(
