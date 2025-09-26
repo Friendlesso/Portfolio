@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@codemirror/lang-html": "^6.4.10",
     "@emailjs/browser": "^4.4.1",
     "@monaco-editor/react": "^4.7.0",
     "@tailwindcss/vite": "^4.1.12",

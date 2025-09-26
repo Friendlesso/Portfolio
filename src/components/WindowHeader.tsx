@@ -10,6 +10,7 @@ interface WindowHeaderProps {
   isMaximized?: boolean
   onMaximize?: () => void
   disableMaximize?: boolean
+  className?: string
 }
 
 export function WindowHeader({ label, icon, bgColor, onClose, onMaximize, disableMaximize }: WindowHeaderProps) {
