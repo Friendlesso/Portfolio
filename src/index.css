@@ -7,6 +7,13 @@
   font-style: normal;
 }
 
+body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* FireFox */
+  -ms-user-select: none; /* Edge */
+  user-select: none;
+}
+
 @theme {
   --color-background: #0089DA;
   --taskbar-color: #FFDDDF;

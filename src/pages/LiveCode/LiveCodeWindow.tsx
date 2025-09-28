@@ -68,7 +68,7 @@ export function LiveCodeWindow({ item, onClose }: LiveCodeWindowProps) {
   if (!item) return
   return (
     <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-      ${isMaximized ? 'w-[100vw] h-[100vh] pb-15' : 'h-[80vh] w-fit min-w-[750px] max-w-[700px]'}
+      ${isMaximized ? 'w-[100vw] h-[100vh] pb-15' : 'h-[80vh] w-fit min-w-[700px] max-w-[700px]'}
     `}>
       <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
       <div className="flex flex-1 flex-col items-center bg-[var(--folder-box-color)] dual-border-inner mt-1 px-2 py-2 overflow-y-auto">
