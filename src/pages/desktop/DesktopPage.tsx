@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { TaskBar } from '../../components/TaskBar'
+import { TaskBar } from '../../components/TaskBar/TaskBar'
 import { menuItems } from '../../data/desktopItems'
 export function DesktopPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
