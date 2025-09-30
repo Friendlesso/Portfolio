@@ -18,14 +18,16 @@ export function TackBarCalender() {
 
 
   return (
-    <div className="bg-[var(--folder-box-color)]">
-      <div>
+    <div className="bg-[var(--folder-box-color)] text-lg w-fit min-w-[300px] border-white border-t-3 border-l-3 rounded-tl-xl absolute bottom-[-13px] right-[-13px] p-2">
+      <div className="px-3 border-b-white border-b-2 w-full mb-2">
         <p>{currentDate.format("dddd,MMMM DD")}</p>
       </div>
-      <div>
+      <div className="flex justify-between mx-3">
         <span>{currentDate.format("MMMM YYYY")}</span>
-        <button onClick={() => setCurrentDate(currentDate.subtract(1, "month"))}>◀</button>
-        <button onClick={() => setCurrentDate(currentDate.add(1, "month"))}>▶</button>
+        <div className="flex">
+          <button className="hover:text-white" onClick={() => setCurrentDate(currentDate.subtract(1, "month"))}>◀</button>
+          <button className="hover:text-white" onClick={() => setCurrentDate(currentDate.add(1, "month"))}>▶</button>
+        </div>
       </div>
       {/* Weekday headers */}
       <div className="grid grid-cols-7 text-center mb-1">
@@ -36,7 +38,7 @@ export function TackBarCalender() {
       {/* Days */}
       <div className="grid grid-cols-7 text-center">
         {days.map((day, i) => (
-          <div key={i} className={` ${day && currentDate.date() === day ? "bg-white rounded-full" : ""}`}>
+          <div key={i} className={` hover:bg-white hover:rounded-full text-black ${day && currentDate.date() === day ? "bg-white rounded-full" : ""}`}>
             {day || ""}
           </div>
         ))}

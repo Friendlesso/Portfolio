@@ -2,6 +2,7 @@ import { useEffect, useRef, type RefObject } from 'react'
 import windowsLable from '../../assets/images/windows.png'
 import linkedInImage from '../../assets/images/icons/briefcase.png'
 import instagramImage from '../../assets/images/icons/camera.png'
+
 import gitHubImage from '../../assets/images/icons/github.png'
 import resumeImage from '../../assets/images/icons/contact_book.png'
 import type { menuItems } from '../../data/desktopItems'
