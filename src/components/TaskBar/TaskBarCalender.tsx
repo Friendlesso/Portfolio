@@ -18,14 +18,14 @@ export function TackBarCalender({ isCalenderOpen, onClose, ignoreRef }: Calender
     if (!isCalenderOpen) return;
 
     const handleClickOutside = (e: MouseEvent) => {
-      if (calRef.current && !calRef.current.contains(e.target as Node) && (!ignoreRef?.current && ignoreRef.current?.contains(e.target as Node))) {
+      if (calRef.current && !calRef.current.contains(e.target as Node) && !(ignoreRef?.current && ignoreRef.current?.contains(e.target as Node))) {
         onClose();
       }
     }
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [isCalenderOpen, onClose])
+  }, [isCalenderOpen,ignoreRef ,onClose])
 
   if (!isCalenderOpen) return null;
 
