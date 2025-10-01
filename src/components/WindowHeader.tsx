@@ -22,14 +22,14 @@ export function WindowHeader({ label, icon, bgColor, onClose, onMaximize, disabl
       </div>
       <div className="flex">
         <button className="dual-border sm:pointer-none  bg-[var(--folder-box-color)] w-6 h-6">
-          <img src={minimizeIcon} alt="" className="w-fit" />
+          <img src={minimizeIcon} loading='lazy' alt="Minimize Button" className="w-fit" />
         </button>
         <button className={`dual-border p-0.5 bg-[var(--folder-box-color)] w-6 h-6 ${disableMaximize ? 'opacity-50 cursor-not-allowed ' : ''}`}
           onClick={onMaximize}>
-          <img src={maximizeIcon} alt="" className="w-fit" />
+          <img src={maximizeIcon} loading='lazy' alt="Maximize Button" className="w-fit" />
         </button>
         <button onClick={onClose} className="dual-border p-0.5 bg-[var(--folder-box-color)] w-6 h-6">
-          <img src={closeIcon} alt="" className="w-fit" />
+          <img src={closeIcon} loading='lazy' alt="Close button" className="w-fit" />
         </button>
       </div>
     </header>

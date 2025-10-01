@@ -42,15 +42,15 @@ export function TaskBarMenu({ isShowing, onClose, ignoreRef, onOpenItem }: TaskB
           </div>
           <div className='flex flex-col justify-between'>
             <a href='https://www.linkedin.com/in/mihailo-djurovic-2598a8336' target='_blank' rel="noopener noreferrer" className="flex items-center pl-2 pr-4 py-2 hover:bg-[var(--folder-background)]">
-              <img className="w-8" src={linkedInImage} alt="" />
+              <img className="w-8" loading='lazy' src={linkedInImage} alt="LinkedIn" />
               <p className='text-xl pl-4'>LinkedIn</p>
             </a>
             <a href='https://www.instagram.com/friendlesso/' target='_blank' rel="noopener noreferrer" className="flex items-center pl-2 pr-4 py-2 hover:bg-[var(--folder-background)]">
-              <img className="w-8" src={instagramImage} alt="" />
+              <img className="w-8" loading='lazy' src={instagramImage} alt="Instagram" />
               <p className='text-xl pl-4'>Instagram</p>
             </a>
             <a href='https://github.com/Friendlesso' target='_blank' rel='noopener noreferrer' className="flex items-center pl-2 pr-4 py-2 hover:bg-[var(--folder-background)]">
-              <img className="w-8" src={gitHubImage} alt="" />
+              <img className="w-8" loading='lazy' src={gitHubImage} alt="GitHub" />
               <p className='text-xl pl-4'>GitHub</p>
             </a>
             <button className="flex items-center pl-2 pr-4 py-2 border-t-2 border-t-white hover:bg-[var(--folder-background)] cursor-pointer"
@@ -58,7 +58,7 @@ export function TaskBarMenu({ isShowing, onClose, ignoreRef, onOpenItem }: TaskB
                 onOpenItem("Resume");
                 onClose()
               }}>
-              <img className="w-8" src={resumeImage} alt="" />
+              <img className="w-8" loading='lazy' src={resumeImage} alt="Resume" />
               <p className='text-xl pl-4'>Resume</p>
             </button>
           </div>

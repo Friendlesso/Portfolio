@@ -61,7 +61,7 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
                 setOpenIndex(index)
               }}
               className="flex flex-col justify-between items-center mr-4">
-              <img src={game.icon} className="w-10" alt="" />
+              <img src={game.icon} className="w-10" alt="Game icon" />
               <p>{game.name}</p>
             </button>
           ))}

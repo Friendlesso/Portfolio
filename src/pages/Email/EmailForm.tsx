@@ -40,7 +40,7 @@ export function EmailForm() {
 
       <section className='bg-[var(--folder-box-color)] dual-border-inner mt-1 px-2 py-1 sm:px-3 lg:px-6 overflow-y-auto'>
         <button type='submit' className='flex text-xl px-2 items-center dual-border-folder cursor-pointer'>
-          <img src={EmailSend} className='w-4 mr-1' alt="" />
+          <img src={EmailSend} className='w-4 mr-1' loading='lazy' alt="Send Email Button" />
           Send
         </button>
       </section>

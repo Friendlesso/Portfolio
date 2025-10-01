@@ -58,7 +58,7 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
                 onClick={() => setOpenProject(proj)}
                 className="flex flex-col justify-between items-center mr-4"
               >
-                <img className="w-10 h-10" src={proj.icon} alt="" />
+                <img className="w-10 h-10" loading="lazy" src={proj.icon} alt="Project Icon" />
                 <p>{proj.name}</p>
               </button>
             ))}

@@ -26,7 +26,7 @@ export function GithubProfile() {
       <div className="w-full">
         <div className="flex flex-row items-center lg:items-start lg:flex-col my-5">
           <div>
-            <img src={profile.avatar_url} alt="Profile Picture"
+            <img src={profile.avatar_url} alt="Profile Picture" loading="lazy"
               className="rounded-[50%] w-40 border-3 border-[var(--github-view-button)] " />
           </div>
           <div className=" flex flex-col ml-3 lg:ml-0">
@@ -43,7 +43,7 @@ export function GithubProfile() {
             py-1.5 text-center rounded-md">View Profile</a>
         </div>
         <div className="flex items-center">
-          <img src={EmailGh} alt="" className="w-4 h-4 mr-2 " />
+          <img src={EmailGh} loading="lazy" alt="Email Icon" className="w-4 h-4 mr-2 " />
           <p className="text-xl">mihailoless@gmail.com</p>
         </div>
       </div>
