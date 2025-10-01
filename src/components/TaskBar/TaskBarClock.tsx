@@ -16,7 +16,7 @@ export function TaskBarClock() {
         <Clock />
       </button>
       {isCalenderOpen && (
-        <div className=" absolute right-0 bottom-14 mb-2">
+        <div className=" absolute right-0 bottom-14 mb-2 ">
           <TackBarCalender />
         </div>
       )}
