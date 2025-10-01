@@ -1,12 +1,33 @@
-import { useState } from "react";
+import { useEffect, useRef, useState, type RefObject } from "react";
 import dayjs from "dayjs";
 
-export function TackBarCalender() {
+interface CalenderProps {
+  isCalenderOpen: boolean
+  onClose: () => void
+  ignoreRef: RefObject<HTMLButtonElement | null>
+}
+export function TackBarCalender({ isCalenderOpen, onClose, ignoreRef }: CalenderProps) {
   const [currentDate, setCurrentDate] = useState(dayjs());
+  const calRef = useRef<HTMLDivElement>(null)
 
   const startOfMonth = currentDate.startOf("month");
   const daysInMonth = currentDate.daysInMonth();
   const startDay = startOfMonth.day();
+
+  useEffect(() => {
+    if (!isCalenderOpen) return;
+
+    const handleClickOutside = (e: MouseEvent) => {
+      if (calRef.current && !calRef.current.contains(e.target as Node) && (!ignoreRef?.current && ignoreRef.current?.contains(e.target as Node))) {
+        onClose();
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [isCalenderOpen, onClose])
+
+  if (!isCalenderOpen) return null;
 
   const days: (number | null)[] = Array(startDay).fill(null).concat(
     Array.from({ length: daysInMonth }, (_, i) => i + 1)
@@ -18,7 +39,7 @@ export function TackBarCalender() {
 
 
   return (
-    <div className="bg-[var(--folder-box-color)] text-lg w-fit min-w-[300px] border-white border-t-3 border-l-3 rounded-tl-xl absolute bottom-[-13px] right-[-13px] p-2">
+    <div ref={calRef} className="bg-[var(--folder-box-color)] text-lg w-fit min-w-[300px] border-white border-t-3 border-l-3 rounded-tl-xl absolute bottom-[-13px] right-[-13px] p-2">
       <div className="px-3 border-b-white border-b-2 w-full mb-2">
         <p>{currentDate.format("dddd,MMMM DD")}</p>
       </div>

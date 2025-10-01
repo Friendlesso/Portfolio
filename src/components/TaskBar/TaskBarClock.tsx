@@ -17,7 +17,11 @@ export function TaskBarClock() {
       </button>
       {isCalenderOpen && (
         <div className=" absolute right-0 bottom-14 mb-2 ">
-          <TackBarCalender />
+          <TackBarCalender 
+            isCalenderOpen={isCalenderOpen} 
+            onClose={() => setIsCalenderOpen(false)}  
+            ignoreRef={calenderButtonRef}
+          />
         </div>
       )}
     </div>
