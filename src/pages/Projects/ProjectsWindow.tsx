@@ -7,6 +7,7 @@ import { ProjectItems, type ProjectItem } from "../../data/projectsData";
 import { useState } from "react"
 import { ProjectPage } from "./ProjectPage"
 import { useMaximizable } from "../../hooks/useMaximizable"
+import { fileSize } from "../../utils/fileSize"
 
 interface FolderPageProps {
   item: typeof menuItems[0] | null
@@ -33,7 +34,12 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
         `}>
         <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
         <div className="bg-[var(--folder-box-color)] px-3">
-          <FileMenuBar />
+          <FileMenuBar 
+            version="1.25" 
+            fileSize={`${fileSize(ProjectItems)}Mb`}
+            headerColor="bg-[var(--folder-header)]" 
+            hoverColor="hover:text-background" 
+          />
         </div>
         <div>
 

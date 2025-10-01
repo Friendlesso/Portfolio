@@ -39,7 +39,12 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
         disableMaximize={isSmallScreen}
       />
       <div className="bg-[var(--folder-box-color)] px-3">
-        <FileMenuBar />
+        <FileMenuBar 
+          version="1.0" 
+          fileSize="14.0kb"
+          headerColor="bg-[#009d0a]" 
+          hoverColor="hover:text-black"
+        />
       </div>
       <div>
 
