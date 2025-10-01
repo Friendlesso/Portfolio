@@ -1,7 +1,7 @@
 import SnakeGameIcon from "../assets/images/icons/snakeGame.png"
 import { SnakeGame } from "../pages/Games/SnakeGame";
 import MemoryMatchGameIcon from "../assets/images/icons/memoryMatch.svg"
-import { MemoryMatchGame } from "../pages/Games/MemoryMatchGame";
+import { MemoryMatchGame } from "../pages/Games/MemoryMatch/MemoryMatchGame";
 import type { ComponentType } from "react";
 
 export interface gamesProps {
