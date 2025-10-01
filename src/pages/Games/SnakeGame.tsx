@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import { startGame } from "./snake"
 import { WindowHeader } from "../../components/WindowHeader";
-import SnakeGameIcon from "../../assets/images/icons/snakeGame.png"
+import SnakeGameIcon from "../../assets/images/icons/snakeGame.svg"
 
 
 interface SnakeGameProps {

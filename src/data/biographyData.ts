@@ -1,5 +1,5 @@
 import profilePicture from '../assets/images/MihailoPicture.jpg'
-import locationIcon from '../assets/images/icons/world.png'
+import locationIcon from '../assets/images/icons/world.svg'
 
 export const bioData = {
   name: 'Mihailo Djurovic',

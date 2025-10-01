@@ -1,4 +1,4 @@
-import GameComputerPng from "../../../assets/images/icons/game_computer.png"
+import GameComputerPng from "../../../assets/images/icons/game_computer.svg"
 
 type Card = { id: number, src: string, bgColor: string, matched: boolean }
 

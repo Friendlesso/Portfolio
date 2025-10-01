@@ -1,6 +1,6 @@
 import ArrowLeft from '../assets/images/icons/ArrowLeft.svg'
 import ArrowRight from '../assets/images/icons/ArrowRight.svg'
-import FolderUp from '../assets/images/icons/folder_open.png'
+import FolderUp from '../assets/images/icons/folder_open.svg'
 import Cut from '../assets/images/icons/Cut.svg'
 import Copy from '../assets/images/icons/Copy.svg'
 import Paste from '../assets/images/icons/Paste.svg'

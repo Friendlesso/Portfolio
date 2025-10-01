@@ -1,6 +1,6 @@
 import { WindowHeader } from "../../components/WindowHeader";
 import { useMaximizable } from "../../hooks/useMaximizable.ts";
-import TextFilePng from "../../assets/images/icons/text_file.png"
+import TextFilePng from "../../assets/images/icons/text_file.svg"
 interface TextFileProps {
 
   onClose: () => void

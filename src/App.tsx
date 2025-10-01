@@ -1,5 +1,5 @@
 import './App.css'
-import siteIcon from './assets/images/icons/world.png'
+import siteIcon from './assets/images/icons/world.svg'
 import { DesktopPage } from './pages/Desktop/DesktopPage'
 
 function App() {

@@ -3,7 +3,7 @@ import { TaskBar } from '../../components/TaskBar/TaskBar'
 import { menuItems } from '../../data/desktopItems'
 import { TextFile } from '../TextFile/TextFile'
 import { ContextMenu } from '../../components/ContextMenu/ContextMenu'
-import TextFilePng from '../../assets/images/icons/text_file.png'
+import TextFilePng from '../../assets/images/icons/text_file.svg'
 
 export function DesktopPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)

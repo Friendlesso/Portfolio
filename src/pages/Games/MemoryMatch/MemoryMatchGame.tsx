@@ -1,9 +1,9 @@
-import GameFilePng from "../../../assets/images/icons/game_file.png"
-import GameDiscPng from "../../../assets/images/icons/game_disc.png"
-import GameDolphinePng from "../../../assets/images/icons/game_dolphine.png"
-import GameComputerPng from "../../../assets/images/icons/game_computer.png"
+import GameFilePng from "../../../assets/images/icons/game_file.svg"
+import GameDiscPng from "../../../assets/images/icons/game_disc.svg"
+import GameDolphinePng from "../../../assets/images/icons/game_dolphine.svg"
+import GameComputerPng from "../../../assets/images/icons/game_computer.svg"
 import GameIconPng from "../../../assets/images/icons/memoryMatch.svg"
-import GameBackground from "../../../assets/images/icons/MMGameBg.jpg"
+import GameBackground from "../../../assets/images/icons/MMGameBg.svg"
 import { WindowHeader } from "../../../components/WindowHeader"
 import { useEffect, useState } from "react";
 import { SingleCard } from "./SingleCard";

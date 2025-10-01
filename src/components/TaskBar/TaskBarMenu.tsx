@@ -1,10 +1,10 @@
 import { useEffect, useRef, type RefObject } from 'react'
 import windowsLable from '../../assets/images/windows.png'
-import linkedInImage from '../../assets/images/icons/briefcase.png'
-import instagramImage from '../../assets/images/icons/camera.png'
+import linkedInImage from '../../assets/images/icons/briefcase.svg'
+import instagramImage from '../../assets/images/icons/camera.svg'
 
-import gitHubImage from '../../assets/images/icons/github.png'
-import resumeImage from '../../assets/images/icons/contact_book.png'
+import gitHubImage from '../../assets/images/icons/github.svg'
+import resumeImage from '../../assets/images/icons/contact_book.svg'
 import type { menuItems } from '../../data/desktopItems'
 
 type TaskBarMenuProps = {

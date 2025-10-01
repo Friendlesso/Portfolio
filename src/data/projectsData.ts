@@ -1,4 +1,4 @@
-import FolderImage from '../assets/images/icons/folder_closed.png'
+import FolderImage from '../assets/images/icons/folder_closed.svg'
 
 export interface TechCategory {
   label: string;

@@ -1,4 +1,4 @@
-import SnakeGameIcon from "../assets/images/icons/snakeGame.png"
+import SnakeGameIcon from "../assets/images/icons/snakeGame.svg"
 import { SnakeGame } from "../pages/Games/SnakeGame";
 import MemoryMatchGameIcon from "../assets/images/icons/memoryMatch.svg"
 import { MemoryMatchGame } from "../pages/Games/MemoryMatch/MemoryMatchGame";
