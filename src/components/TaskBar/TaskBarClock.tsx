@@ -15,7 +15,6 @@ export function TaskBarClock() {
         className="text-lg dual-border px-3 py-1.5">
         <Clock />
       </button>
-      {isCalenderOpen && (
         <div className=" absolute right-0 bottom-14 mb-2 ">
           <TackBarCalender 
             isCalenderOpen={isCalenderOpen} 
@@ -23,7 +22,6 @@ export function TaskBarClock() {
             ignoreRef={calenderButtonRef}
           />
         </div>
-      )}
     </div>
   )
 

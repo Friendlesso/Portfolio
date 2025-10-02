@@ -50,7 +50,7 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
 
       </div>
       <div className="bg-[var(--folder-box-color)] dual-border-folder -mt-0.5 px-3 py-1 overflow-y-auto">
-        <AdressBar />
+        <AdressBar adress="Games" />
       </div>
       <section className="bg-[var(--folder-box-color)] flex-1 dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
         <div className=" flex">

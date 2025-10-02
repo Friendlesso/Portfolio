@@ -25,9 +25,9 @@ export function TackBarCalender({ isCalenderOpen, onClose, ignoreRef }: Calender
 
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside)
-  }, [isCalenderOpen,ignoreRef ,onClose])
+  }, [isCalenderOpen, ignoreRef, onClose])
 
-  if (!isCalenderOpen) return null;
+
 
   const days: (number | null)[] = Array(startDay).fill(null).concat(
     Array.from({ length: daysInMonth }, (_, i) => i + 1)
@@ -39,8 +39,11 @@ export function TackBarCalender({ isCalenderOpen, onClose, ignoreRef }: Calender
 
 
   return (
-    <div ref={calRef} className="bg-[var(--folder-box-color)] text-lg w-fit min-w-[300px] border-white border-t-3 border-l-3 rounded-tl-xl absolute bottom-[-13px] right-[-13px] p-2">
-      <div className="px-3 border-b-white border-b-2 w-full mb-2">
+    <div
+      ref={calRef}
+      className={`bg-[var(--folder-box-color)] text-lg w-fit min-w-[300px] border-white border-t-3 border-l-3 rounded-tl-xl absolute bottom-[-13px] right-[-13px] p-2 transform transition-transform duration-300 ease-in-out ${!isCalenderOpen ? "translate-x-[300px]" : "translate-x-0"
+        }`}
+    >      <div className="px-3 border-b-white border-b-2 w-full mb-2">
         <p>{currentDate.format("dddd,MMMM DD")}</p>
       </div>
       <div className="flex justify-between mx-3">

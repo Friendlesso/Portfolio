@@ -2,7 +2,7 @@ import { menuItems } from "../../data/desktopItems"
 import { WindowHeader } from "../../components/WindowHeader"
 import { FileMenuBar } from "../../components/FileMenuBar"
 import { AdressBar } from "../../components/AdressBar"
-import { ToolBar } from "../../components/ToolBar"
+// import { ToolBar } from "../../components/ToolBar"
 import { ProjectItems, type ProjectItem } from "../../data/projectsData";
 import { useState } from "react"
 import { ProjectPage } from "./ProjectPage"
@@ -30,7 +30,7 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
   return (
     <>
       <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[70vh] w-fit"}
+          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[50vh] w-fit"}
         `}>
         <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
         <div className="bg-[var(--folder-box-color)] px-3">
@@ -44,11 +44,11 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
         <div>
 
         </div>
-        <div className="bg-[var(--folder-box-color)] dual-border-inner px-3 overflow-y-auto">
+        {/* <div className="bg-[var(--folder-box-color)] dual-border-inner px-3 overflow-y-auto">
           <ToolBar />
-        </div>
+        </div> */}
         <div className="bg-[var(--folder-box-color)] dual-border-folder -mt-0.5 px-3 py-1 overflow-y-auto">
-          <AdressBar />
+          <AdressBar adress="Projects" />
         </div>
         <section className="bg-[var(--folder-box-color)] flex-1 dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
           <div className="flex">

@@ -2,6 +2,8 @@ import GameFilePng from "../../../assets/images/icons/game_file.svg"
 import GameDiscPng from "../../../assets/images/icons/game_disc.svg"
 import GameDolphinePng from "../../../assets/images/icons/game_dolphine.svg"
 import GameComputerPng from "../../../assets/images/icons/game_computer.svg"
+import GamePalemPng from "../../../assets/images/icons/game_palme.svg"
+import GameClockPng from "../../../assets/images/icons/game_clock.svg"
 import GameIconPng from "../../../assets/images/icons/memoryMatch.svg"
 import GameBackground from "../../../assets/images/icons/MMGameBg.svg"
 import { WindowHeader } from "../../../components/WindowHeader"
@@ -20,6 +22,8 @@ const cardImages = [
   { "src": GameDiscPng, "bgColor": "#604cd3", matched: false },
   { "src": GameDolphinePng, "bgColor": "#94d3d9", matched: false },
   { "src": GameComputerPng, "bgColor": "#f9cfe2", matched: false },
+  { "src": GamePalemPng, "bgColor": "#79CCAC", matched: false },
+  { "src": GameClockPng, "bgColor": "#f9cfe2", matched: false },
 ];
 
 export function MemoryMatchGame({ onClose }: MemoryGameProps) {
@@ -110,7 +114,7 @@ export function MemoryMatchGame({ onClose }: MemoryGameProps) {
             />
           ))}
         </div>
-        <div className="flex flex-col items-center mt-[30%]">
+        <div className="flex flex-col items-center mt-7">
           <p className="text-xl text-[#11509c]">Turns: {turns}</p>
           <button
             onClick={shuffleCards}

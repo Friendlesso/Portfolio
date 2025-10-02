@@ -25,7 +25,7 @@ export function FileMenuBar({version,fileSize,headerColor,hoverColor}: FileMenuB
 
   return (
     <div className="flex text-lg">
-      <button className="file-menu-bar px-2 "><u>F</u>ile</button>
+      {/* <button className="file-menu-bar px-2 "><u>F</u>ile</button> */}
       {/* View Button logic */}
       <div className="relative">
         <button
