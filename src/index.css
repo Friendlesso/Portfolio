@@ -8,9 +8,12 @@
 }
 
 body {
-  -webkit-user-select: none; /* Safari */
-  -moz-user-select: none; /* FireFox */
-  -ms-user-select: none; /* Edge */
+  -webkit-user-select: none;
+  /* Safari */
+  -moz-user-select: none;
+  /* FireFox */
+  -ms-user-select: none;
+  /* Edge */
   user-select: none;
 }
 
@@ -87,6 +90,7 @@ body {
   border-right-color: black;
   border-bottom-color: black;
 }
+
 .file-menu-bar:active {
   border-width: 2px;
   border-style: solid;
@@ -102,4 +106,37 @@ body {
   border-left-color: black;
   border-right-color: white;
   border-bottom-color: white;
+}
+
+@keyframes comfyBounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: ease-in-out;
+  }
+
+  30% {
+    transform: translateY(15%);
+    animation-timing-function: ease-in-out;
+  }
+
+  60% {
+    transform: translateY(-15%);
+    animation-timing-function: ease-in-out;
+  }
+
+  80% {
+    transform: translateY(-5%);
+    animation-timing-function: ease-in-out;
+  }
+
+  90% {
+    transform: translateY(5%);
+    animation-timing-function: ease-in-out;
+  }
+}
+
+
+
+.techStack:hover {
+  animation: comfyBounce  2s infinite;
 }

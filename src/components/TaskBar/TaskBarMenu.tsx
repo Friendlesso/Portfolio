@@ -31,12 +31,12 @@ export function TaskBarMenu({ isShowing, onClose, ignoreRef, onOpenItem }: TaskB
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [isShowing, onClose, ignoreRef])
 
-  if (!isShowing) return null;
-
   return (
     <>
-      {isShowing && (
-        <nav ref={navRef} className="flex absolute bottom-14 left-0 bg-[var(--folder-box-color)] w-fit p-2" aria-label='Taskbar Menu'>
+        <nav 
+          ref={navRef} 
+          className={`flex absolute bottom-14 left-0 bg-[var(--folder-box-color)] w-fit border-white border-t-3 border-r-3 p-2 z-40 transform transition-transform duration-300 ease-in-out ${isShowing ? "translate-x-0" : "translate-x-[-300px]"}`}
+          aria-label='Taskbar Menu'>
           <div>
             <img src={windowsLable} alt="Windows94 lable" />
           </div>
@@ -63,8 +63,6 @@ export function TaskBarMenu({ isShowing, onClose, ignoreRef, onOpenItem }: TaskB
             </button>
           </div>
         </nav>
-      )}
-
     </>
   )
 }
