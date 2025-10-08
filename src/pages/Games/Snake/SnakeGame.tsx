@@ -8,7 +8,7 @@ interface SnakeGameProps {
   onClose: () => void;
 }
 
-export function SnakeGame({onClose}: SnakeGameProps) {
+export function SnakeGame({ onClose }: SnakeGameProps) {
 
   useEffect(() => {
     startGame("game-board", "instruction-text", "score", "highScore");
@@ -16,7 +16,13 @@ export function SnakeGame({onClose}: SnakeGameProps) {
 
   return (
     <div className="flex flex-col items-center justify-center h-full bg-[#363636] p-3 rounded-4xl border-8 border-white">
-      <WindowHeader label="Snake" onClose={onClose} icon={SnakeGameIcon} bgColor={"bg-[var(--games-header)]"} />
+      <WindowHeader
+        label="Snake"
+        onClose={onClose}
+        icon={SnakeGameIcon}
+        bgColor={"bg-[var(--games-header)]"}
+        disableMaximize={true}
+      />
       <div>
         <div className="justify-between flex text-[2.5rem] px-4">
           <h1 id="score" className="text-[#6EAF42]">000</h1>

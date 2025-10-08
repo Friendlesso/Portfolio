@@ -15,7 +15,13 @@ export function DesktopPage() {
 
   const [desktopItems, setDesktopItems] = useState(menuItems)
   const [menuPos, setMenuPos] = useState<{ x: number, y: number } | null>(null)
-  const [iconSize, setIconSize] = useState<"small" | "medium" | "large">("medium")
+  const [iconSize, setIconSize] = useState<"small" | "medium" | "large">(
+    () => (sessionStorage.getItem("iconSize") as "small" | "medium" | "large" || "medium")
+  );
+
+  useEffect(() => {
+    sessionStorage.setItem("iconSize", iconSize);
+  }, [iconSize])
 
   const iconRef = useRef<(HTMLButtonElement | null)[]>([])
 

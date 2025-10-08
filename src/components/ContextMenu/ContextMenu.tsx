@@ -29,13 +29,19 @@ export function ContextMenu({ x, y, onClose, onChangeIconSize, onNewTextFile }: 
         {hovered === "view" && (
           <ul className="absolute top-0 left-full bg-white border rounded shadow-lg w-fit">
             <li className="hover:bg-gray-200 m-1 px-2 rounded-sm text-start text-nowrap "
-              onClick={() => onChangeIconSize("large")}
+              onClick={
+                () => onChangeIconSize("large")
+              }
             >Large icons</li>
             <li className="hover:bg-gray-200 m-1 px-2 rounded-sm text-start text-nowrap "
-              onClick={() => onChangeIconSize("medium")}
+              onClick={
+                () => onChangeIconSize("medium")
+              }
             >Medium icons</li>
             <li className="hover:bg-gray-200 m-1 px-2 rounded-sm text-start text-nowrap "
-              onClick={() => onChangeIconSize("small")}
+              onClick={
+                () => onChangeIconSize("small")
+              }
             >Small icons</li>
           </ul>
         )}

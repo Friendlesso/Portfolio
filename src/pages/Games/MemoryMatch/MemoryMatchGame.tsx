@@ -100,6 +100,7 @@ export function MemoryMatchGame({ onClose }: MemoryGameProps) {
             icon={GameIconPng}
             bgColor="bg-[#0079D5]"
             onClose={onClose}
+            disableMaximize={true}
           />
         </header>
         <div className="mt-10 grid grid-cols-4 gap-4 mx-2">
