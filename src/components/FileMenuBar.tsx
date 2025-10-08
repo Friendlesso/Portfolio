@@ -63,7 +63,7 @@ export function FileMenuBar({version,fileSize,headerColor,hoverColor}: FileMenuB
         )}
       </div>
       {isFolderSizeOpen && (
-        <div className="absolute top-1/2 left-1/2 w-48 h-19 bg-[var(--folder-background)] border shadow-lg z-50 p-1">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 w-48 h-19 bg-[var(--folder-background)] border shadow-lg z-50 p-1">
           <div className={`flex justify-between items-center text-white ${headerColor} px-1.5 mb-1`}>
             <h3>Folder Size</h3>
             <button className={`cursor-pointer hover:bg-white text-white ${hoverColor} hover:border-2 rounded-full px-2 text-sm`} onClick={closeFolderSize}>X</button>
@@ -95,7 +95,7 @@ export function FileMenuBar({version,fileSize,headerColor,hoverColor}: FileMenuB
         )}
       </div>
       {isFolderVersionOpen && (
-        <div className="absolute top-1/2 left-1/2 w-48 h-19 bg-[var(--folder-background)] border shadow-lg z-50 p-1">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  w-48 h-19 bg-[var(--folder-background)] border shadow-lg z-50 p-1">
           <div className={`flex justify-between items-center text-white ${headerColor} px-1.5 mb-1`}>
             <h3>Folder Version</h3>
             <button className={`cursor-pointer hover:bg-white text-white ${hoverColor} hover:border-2 rounded-full px-2 text-sm`} onClick={closeFolderVersion}>X</button>

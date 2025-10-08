@@ -1,5 +1,5 @@
 import closeIcon from '../assets/images/icons/close.svg'
-import minimizeIcon from '../assets/images/icons/minimize-fill.svg'
+import backIcon from '../assets/images/icons/ArrowLeft.svg'
 import maximizeIcon from '../assets/images/icons/resize.svg'
 
 interface WindowHeaderProps {
@@ -21,8 +21,8 @@ export function WindowHeader({ label, icon, bgColor, onClose, onMaximize, disabl
         <p className="text-xl pl-2 text-white">{label}</p>
       </div>
       <div className="flex">
-        <button className="dual-border sm:pointer-none  bg-[var(--folder-box-color)] w-6 h-6">
-          <img src={minimizeIcon} loading='lazy' alt="Minimize Button" className="w-fit" />
+        <button onClick={onClose} className="dual-border sm:pointer-none flex justify-center items-center  bg-[var(--folder-box-color)] w-6 h-6">
+          <img src={backIcon} loading='lazy' alt="Minimize Button" className=" w-4 h-4" />
         </button>
         <button className={`dual-border p-0.5 bg-[var(--folder-box-color)] w-6 h-6 ${disableMaximize ? 'opacity-50 cursor-not-allowed ' : ''}`}
           onClick={onMaximize}>
