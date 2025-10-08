@@ -33,11 +33,17 @@ export function DesktopPage() {
   }, [openLabel])
 
   const handleNewTextFile = () => {
+    const textFileCount = desktopItems.filter(item =>
+      item.label.startsWith("TextFile")
+    ).length
+
+    const newId = textFileCount + 1;
+    const newLabel = `TextFile-${newId}`
     const newFile = {
-      label: `TextFile`,
+      label: newLabel,
       icon: TextFilePng, // valid icon path
       headerColor: '#41009D',
-      component: TextFile
+      component: (props) => <TextFile {...props} fileId={newId} label={newLabel} />
     }
     setDesktopItems(prev => [...prev, newFile])
   }

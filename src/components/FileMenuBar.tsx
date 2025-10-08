@@ -5,9 +5,10 @@ interface FileMenuBarProps {
   fileSize: string,
   headerColor: string
   hoverColor: string
+  onSave?: () => void
 }
 
-export function FileMenuBar({version,fileSize,headerColor,hoverColor}: FileMenuBarProps) {
+export function FileMenuBar({ version, fileSize, headerColor, hoverColor, onSave }: FileMenuBarProps) {
   const [openMenu, setOpenMenu] = useState<string | null>(null);
   const [isFolderSizeOpen, setIsFolderSizeOpen] = useState(false);
   const [isFolderVersionOpen, setIsFolderVersionOpen] = useState(false);
@@ -41,6 +42,18 @@ export function FileMenuBar({version,fileSize,headerColor,hoverColor}: FileMenuB
               onClick={() => window.location.reload()}>
               Refresh
             </button>
+            {onSave && (
+              <button
+                className="bloc w-full px-2 py-0.5 file-menu-bar"
+                onClick={() => {
+                  onSave()
+                  setOpenMenu(null)
+                }}
+              >
+                Save
+              </button>
+            )}
+
           </div>
         )}
       </div>
@@ -63,7 +76,7 @@ export function FileMenuBar({version,fileSize,headerColor,hoverColor}: FileMenuB
         )}
       </div>
       {isFolderSizeOpen && (
-        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 w-48 h-19 bg-[var(--folder-background)] border shadow-lg z-50 p-1">
+        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-19 bg-[var(--folder-background)] border shadow-lg z-50 p-1">
           <div className={`flex justify-between items-center text-white ${headerColor} px-1.5 mb-1`}>
             <h3>Folder Size</h3>
             <button className={`cursor-pointer hover:bg-white text-white ${hoverColor} hover:border-2 rounded-full px-2 text-sm`} onClick={closeFolderSize}>X</button>
