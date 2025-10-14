@@ -29,24 +29,24 @@ export function ProjectPage({ project, onClose }: ProjectPageProps) {
       </header>
       <section className="bg-[var(--folder-box-color)] h-full dual-border-inner p-5 overflow-y-auto">
         <h1 className="text-3xl">{project.name}</h1>
-        <div className="flex items-center">
+        <div className="flex items-center my-2">
           <h2 className="whitespace-nowrap text-2xl mr-2">Tech Stack:</h2>
           <TechStack project={project} />
         </div>
         <div>
-          <p className="text-lg">{project.description}</p>
+          <p className="text-xl">{project.description}</p>
         </div>
-        <div>
+        <div className=" my-1">
           <h2 className="text-2xl">Features:</h2>
           <ul className="pl-4">
             {project.features.map((feat, i) => (
-              <li key={i} className="text-lg list-disc">{feat}</li>
+              <li key={i} className="text-xl list-disc">{feat}</li>
             ))}
           </ul>
         </div>
         <div>
           <h2 className="text-2xl">Thought Process & Learnings:</h2>
-          <p className="text-lg">{project.learnings}</p>
+          <p className="text-xl">{project.learnings}</p>
         </div>
       </section>
     </div>

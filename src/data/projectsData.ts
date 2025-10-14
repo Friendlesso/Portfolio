@@ -87,7 +87,7 @@ export const ProjectItems: ProjectData = {
       name: "Suzu-no-Shiori",
       size: 323,
       headerColor: '',
-      description: '',
+      description: 'A simple and elegant timed task management app that helps you stay focused and productive by tracking tasks with precision. Built with attention to usability and clean design, it demonstrates my ability to create tools that combine functionality with a smooth user experience.',
       video: '',
       icon: FolderImage,
       techStack: [
@@ -116,11 +116,28 @@ export const ProjectItems: ProjectData = {
       name: "Portfolio",
       size: 419,
       headerColor: '',
-      description: '',
+      description: 'A fully interactive personal portfolio designed to look and feel like a desktop operating system. Built with React, TypeScript, and Tailwind CSS, it features dynamic folders, and interactive apps that showcase my projects, skills, and creativity — all wrapped in a nostalgic, Windows 95-inspired interface.',
       video: '',
       icon: FolderImage,
-      learnings: '',
-      features: []
+      techStack: [
+        { label: 'React', color: 'bg-[var(--tag-framework)]' },
+        { label: 'TypeScript', color: 'bg-[var(--tag-framework)]' },
+        { label: 'Tailwind CSS', color: 'bg-[var(--tag-framework)]' },
+        { label: 'HTML5/CSS3', color: 'bg-[var(--tag-basic)]' },
+        { label: 'Figma', color: 'bg-[var(--tag-tools)]' },
+      ],
+      learnings: 'This was my first real complex project with React, and I wanted to challenge myself to see how far I could take it. Along the way, I learned a lot about how React’s state and data flow work, and how much easier things get once you start using reusable components. After that clicked, development started flowing so much faster. I also got way better at handling dynamic content and making responsive designs. Overall, this project made me feel much more confident with React and Tailwind CSS.',
+      features: [
+        "Window-like components that simulate a desktop environment with interactive folders.",
+        "Projects folder featuring descriptions and videos of past projects.",
+        "Resume window where visitors can view and download the resume.",
+        "Mail app allowing users to emails messages directly.",
+        "Built-in HTML/CSS/JS code editor for live editing and experimentation.",
+        "GitHub-style section linking to personal repositories and projects.",
+        "Two mini-games — Snake Game and Memory Match Game.",
+        "Right-click menu with options to refresh, resize desktop icons, and create text files.",
+        "Functional clock and calendar components.",
+      ]
     },
   ],
 };

@@ -19,6 +19,7 @@ export const bioData = {
     { label: 'MonogDB', color: 'bg-[var(--tag-backend)]' },
     { label: 'Express', color: 'bg-[var(--tag-backend)]' },
     { label: 'Git/Github', color: 'bg-[var(--tag-tools)]' },
+    { label: 'Figma', color: 'bg-[var(--tag-tools)]' },
   ],
   about: `
     Hi! I’m a 19-year-old self-taught web developer passionate about building modern, user-friendly web applications. I work with HTML, CSS, JavaScript, TypeScript, React, Tailwind, Node.js, Express, and MongoDB, and I’m always eager to learn new technologies and keep up with the latest trends in the tech world.
