@@ -27,7 +27,7 @@ export function ProjectPage({ project, onClose }: ProjectPageProps) {
           disableMaximize={isSmallScreen}
         />
       </header>
-      <section className="bg-[var(--folder-box-color)] h-full dual-border-inner p-5 overflow-y-auto">
+      <section className="bg-[var(--folder-box-color)] flex flex-col flex-1 h-full dual-border-inner p-5 overflow-y-auto">
         <h1 className="text-3xl">{project.name}</h1>
         <div className={`flex  items-center my-2 ${isSmallScreen ? "flex-col flex-wrap " : ""}`}>
           <h2 className={`flex whitespace-nowrap text-2xl mr-2 ${isSmallScreen ? "text-left w-full" : ""}`}>Tech Stack:</h2>
