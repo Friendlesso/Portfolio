@@ -37,7 +37,7 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
         <div className="bg-black flex flex-1 flex-col justify-center items-center h-[100vh]">
           <div className={`flex flex-col max-h-[75vh] overflow-y-auto ${isMaximized ? "max-h-[95vh]" : ""}`}>
             <img src={resumePageOne} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain" alt="Resume Picture" />
-            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain pt-2" alt="Resume Picture" />
+            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[95vh] max-w-full h-auto w-auto object-contain pt-2" alt="Resume Picture" />
           </div>
         </div>
       </div>
