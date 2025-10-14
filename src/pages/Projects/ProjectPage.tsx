@@ -29,8 +29,8 @@ export function ProjectPage({ project, onClose }: ProjectPageProps) {
       </header>
       <section className="bg-[var(--folder-box-color)] h-full dual-border-inner p-5 overflow-y-auto">
         <h1 className="text-3xl">{project.name}</h1>
-        <div className="flex items-center my-2">
-          <h2 className="whitespace-nowrap text-2xl mr-2">Tech Stack:</h2>
+        <div className={`flex  items-center my-2 ${isSmallScreen ? "flex-col flex-wrap " : ""}`}>
+          <h2 className={`flex whitespace-nowrap text-2xl mr-2 ${isSmallScreen ? "text-left w-full" : ""}`}>Tech Stack:</h2>
           <TechStack project={project} />
         </div>
         <div>

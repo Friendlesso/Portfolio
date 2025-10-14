@@ -53,7 +53,7 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
         <AdressBar adress="Games" />
       </div>
       <section className="bg-[var(--folder-box-color)] flex-1 dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
-        <div className=" flex">
+        <div className="flex">
           {games.map((game, index) => (
             <button
               key={index}
@@ -65,6 +65,9 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
               <p>{game.name}</p>
             </button>
           ))}
+          {isSmallScreen && (
+            <p className="text-xl absolute transfrom -translate-y-1/2 -translate-x-1/2 top-1/2 left-1/2">Games are disabled on smaller screens!</p>
+          )}
         </div>
       </section>
     </div>

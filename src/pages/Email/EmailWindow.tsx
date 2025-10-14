@@ -8,7 +8,7 @@ interface EmailWindowProps {
 }
 export function EmailWindow({ item, onClose }: EmailWindowProps) {
 
-  const { isMaximized, toggleMaximized } = useMaximizable();
+  const { isMaximized, toggleMaximized, isSmallScreen } = useMaximizable();
 
   if (!item) return;
   return (
@@ -22,6 +22,7 @@ export function EmailWindow({ item, onClose }: EmailWindowProps) {
           onClose={onClose}
           isMaximized={isMaximized}
           onMaximize={toggleMaximized}
+          disableMaximize={isSmallScreen}
         />
         <EmailForm />
       </div>
