@@ -35,9 +35,9 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
           <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="dual-border p-1 text-lg">Open in a new tab</a>
         </div>
         <div className="bg-black flex flex-1 flex-col justify-center items-center h-[100vh]">
-          <div className={`flex flex-col max-h-[75vh] overflow-y-scroll ${isMaximized ? "max-h-[75vh]" : ""}`}>
-            <img src={resumePageOne} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain mb-2" alt="Resume Picture" />
-            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain" alt="Resume Picture" />
+          <div className={`flex flex-col max-h-[75vh] overflow-y-scroll ${isMaximized ? "max-h-[95vh]" : ""}`}>
+            <img src={resumePageOne} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain" alt="Resume Picture" />
+            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain pt-2" alt="Resume Picture" />
           </div>
         </div>
       </div>
