@@ -28,7 +28,7 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
 
   return (
     <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[50vh] w-fit"}
+          ${isMaximized ? " w-[100vw] h-[100dvh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[50vh] w-fit"}
         `}>
       <WindowHeader
         label={item.label}
@@ -53,7 +53,7 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
         <AdressBar adress="Games" />
       </div>
       <section className="bg-[var(--folder-box-color)] flex-1 dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
-        <div className="flex">
+        <div className="flex flex-wrap">
           {games.map((game, index) => (
             <button
               key={index}
