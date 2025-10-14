@@ -75,7 +75,7 @@ export function DesktopPage() {
   return (
     <>
       <div
-        className="flex flex-col h-screen w-screen bg-[var(--color-background)]"
+        className="flex flex-col h-[100dvh] w-screen overflow-hidden bg-[var(--color-background)]"
         onContextMenu={(e) => {
           e.preventDefault()
           setMenuPos({ x: e.pageX, y: e.pageY })
@@ -83,7 +83,7 @@ export function DesktopPage() {
       >
         <section
           className="flex-1 relative flex flex-col flex-wrap max-h-screen content-start px-4 pt-6"
-          style={{ height: 'calc(100vh - 3.5rem)' }}
+          style={{ height: 'calc(100dvh - 3.5rem)' }}
         >
           {desktopItems.map((item, index) => (
             <button
