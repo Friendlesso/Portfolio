@@ -15,7 +15,7 @@ interface WindowHeaderProps {
 
 export function WindowHeader({ label, icon, bgColor, onClose, onMaximize, disableMaximize }: WindowHeaderProps) {
   return (
-    <header className={`flex justify-between items-center w-full px-2 ${bgColor}`}>
+    <header className={`flex justify-between items-center w-full h-fit px-2 ${bgColor}`}>
       <div className="flex items-center py-2">
         <img src={icon} alt={label} className="w-8 h-8" />
         <p className="text-xl pl-2 text-white">{label}</p>

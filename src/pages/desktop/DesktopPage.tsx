@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import { TaskBar } from '../../components/TaskBar/TaskBar'
 import { menuItems } from '../../data/desktopItems'
 import { TextFile } from '../TextFile/TextFile'
+import type { TextFileProps } from '../TextFile/TextFile'
 import { ContextMenu } from '../../components/ContextMenu/ContextMenu'
 import TextFilePng from '../../assets/images/icons/text_file.svg'
 
@@ -43,13 +44,13 @@ export function DesktopPage() {
       item.label.startsWith("TextFile")
     ).length
 
-    const newId = textFileCount + 1;
+    const newId = (textFileCount + 1).toString();
     const newLabel = `TextFile-${newId}`
     const newFile = {
       label: newLabel,
       icon: TextFilePng, // valid icon path
       headerColor: '#41009D',
-      component: (props) => <TextFile {...props} fileId={newId} label={newLabel} />
+      component: (props: Omit<TextFileProps, 'fileId' | 'label'>) => <TextFile {...props} fileId={newId} label={newLabel} />
     }
     setDesktopItems(prev => [...prev, newFile])
   }
