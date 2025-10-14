@@ -18,7 +18,7 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
 
   return (
     <div className={`dual-border-folder p-1 bg-[var(--folder-background)] transition-all duration-350
-      ${isMaximized ? "h-[100vh] w-[100vw] pb-[3.5rem]" : "h-fit w-fit min-w-[500px] max-w-[950px]"}
+      ${isMaximized ? "h-[100dvh] w-[100vw] pb-[3.5rem]" : "h-fit w-fit min-w-[500px] max-w-[950px]"}
     `}>
       <WindowHeader
         label={item.label}
