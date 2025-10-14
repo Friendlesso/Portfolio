@@ -60,7 +60,7 @@ export function GamesFolder({ item, onClose }: GamesFolderProps) {
               onClick={() => {
                 setOpenIndex(index)
               }}
-              className={`flex flex-col justify-between items-center mr-4 ${isSmallScreen ? "pointer-events-none" : ""} opacity-50`}>
+              className={`flex flex-col justify-between items-center mr-4 ${isSmallScreen ? "pointer-events-none opacity-50" : ""} `}>
               <img src={game.icon} className="w-10 " alt="Game icon" />
               <p>{game.name}</p>
             </button>
