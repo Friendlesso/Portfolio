@@ -50,8 +50,9 @@ body {
 body {
   font-family: 'TahomaXp';
 }
-header {
-  padding-top: env(safe-area-inset-top);
+:root {
+  --safe-top: env(safe-area-inset-top);
+  --safe-bottom: env(safe-area-inset-bottom);
 }
 
 .dual-border-folder {
