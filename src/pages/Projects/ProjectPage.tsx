@@ -14,7 +14,7 @@ export function ProjectPage({ project, onClose }: ProjectPageProps) {
 
   return (
     <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-      ${isMaximized ? "h-[100vh] w-[100vw] pb-[3.5rem]" : "h-[80vh] w-fit min-w-[700px] max-w-[950px]"}
+      ${isMaximized ? "h-[100dvh] w-[100vw] pb-[3.5rem]" : "h-[80vh] w-fit min-w-[700px] max-w-[950px]"}
     `}>
       <header className="bg-[var(--folder-header)]">
         <WindowHeader
