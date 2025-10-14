@@ -30,7 +30,7 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
   return (
     <>
       <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-          ${isMaximized ? " w-[100vw] h-[100vh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[50vh] w-fit"}
+          ${isMaximized ? " w-[100vw] h-[100dvh] pb-[3.5rem] " : "min-w-[550px] max-w-[950px] h-[50vh] w-fit"}
         `}>
         <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
         <div className="bg-[var(--folder-box-color)] px-3">
@@ -50,13 +50,13 @@ export function FolderPage({ item, onClose }: FolderPageProps) {
         <div className="bg-[var(--folder-box-color)] dual-border-folder -mt-0.5 px-3 py-1 overflow-y-auto">
           <AdressBar adress="Projects" />
         </div>
-        <section className="bg-[var(--folder-box-color)] flex-1 dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
+        <section className="bg-[var(--folder-box-color)] flex-1 flex dual-border-inner mt-1 px-3 pt-3 overflow-y-auto">
           <div className="flex">
             {ProjectItems.project.map((proj, index) => (
               <button
                 key={index}
                 onClick={() => setOpenProject(proj)}
-                className="flex flex-col justify-between items-center mr-4"
+                className="flex flex-col items-center mr-4"
               >
                 <img className="w-10 h-10" loading="lazy" src={proj.icon} alt="Project Icon" />
                 <p>{proj.name}</p>
