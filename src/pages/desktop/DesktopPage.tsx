@@ -81,7 +81,7 @@ export function DesktopPage() {
         }}
       >
         <section
-          className="flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 pt-6"
+          className="flex-1 relative flex flex-col flex-wrap max-h-screen content-start px-4 pt-6"
           style={{ height: 'calc(100vh - 3.5rem)' }}
         >
           {desktopItems.map((item, index) => (
@@ -137,7 +137,7 @@ export function DesktopPage() {
           />
         )}
 
-        <footer className="fixed bottom-0 left-0 w-full">
+        <footer className="h-14 w-full">
           <TaskBar
             item={openIndex !== null && desktopItems[openIndex] ? desktopItems[openIndex] : null}
             onClose={() => setOpenLabel(null)}

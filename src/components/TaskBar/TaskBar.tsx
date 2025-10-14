@@ -19,7 +19,7 @@ export function TaskBar({ item, onOpenItem }: TaskBarProps) {
   }
 
   return (
-    <div className=" w-full relative h-14 bg-[var(--taskbar-color)] flex  items-center justify-between px-3 border-t-2 border-white z-50">
+    <div className=" w-full fixed bottom-0 h-14 bg-[var(--taskbar-color)] flex  items-center justify-between px-3 border-t-2 border-white z-50">
       <button ref={startButtonRef} onClick={handleStartClick} className="text-xl dual-border px-7 py-1.5">Start</button>
       <TaskBarMenu
         isShowing={isShowing}

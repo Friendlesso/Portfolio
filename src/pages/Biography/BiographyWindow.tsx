@@ -18,7 +18,7 @@ export function BiographyWindow({ item, onClose }: BiographyWindowProps) {
   if (!item) return
   return (
     <div className={`dual-border-folder p-1 bg-[var(--folder-background)] flex flex-col transition-all duration-350
-      ${isMaximized ? 'w-[100vw] h-[100vh] pb-15' : 'h-[80vh] w-fit min-w-[650px] max-w-[950px]'}
+      ${isMaximized ? 'w-[100vw] h-[100vh]' : 'h-[80vh] w-fit min-w-[650px] max-w-[950px]'}
     `}>
       <WindowHeader label={item.label} icon={item.icon} bgColor={item.headerColor} onClose={onClose} isMaximized={isMaximized} onMaximize={toggleMaximized} disableMaximize={isSmallScreen} />
       <div className="flex flex-1 flex-col items-center bg-[var(--folder-box-color)] dual-border-inner mt-1 px-6 sm:px-8 lg:px-12 overflow-y-auto">

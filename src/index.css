@@ -8,6 +8,8 @@
 }
 
 body {
+  font-family: 'TahomaXp';
+
   -webkit-user-select: none;
   /* Safari */
   -moz-user-select: none;
@@ -15,6 +17,9 @@ body {
   -ms-user-select: none;
   /* Edge */
   user-select: none;
+
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 @theme {
@@ -45,10 +50,6 @@ body {
   --github-view-button: #212830;
   --github-border: #212830;
 
-}
-
-body {
-  font-family: 'TahomaXp';
 }
 
 .dual-border-folder {
@@ -109,7 +110,9 @@ body {
 }
 
 @keyframes comfyBounce {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
     animation-timing-function: ease-in-out;
   }
@@ -138,5 +141,5 @@ body {
 
 
 .techStack:hover {
-  animation: comfyBounce  2s infinite;
+  animation: comfyBounce 2s infinite;
 }
