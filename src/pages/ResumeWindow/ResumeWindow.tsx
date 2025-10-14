@@ -18,7 +18,7 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
 
   return (
     <div className={`dual-border-folder p-1 bg-[var(--folder-background)] transition-all duration-350
-      ${isMaximized ? "h-[100dvh] w-[100vw]" : "h-fit w-fit min-w-[500px] max-w-[950px]"}
+      ${isMaximized ? "h-[100dvh] w-[100vw] " : "h-fit w-fit min-w-[500px] max-w-[950px]"}
     `}>
       <WindowHeader
         label={item.label}
@@ -37,7 +37,7 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
         <div className={`bg-black flex flex-1 flex-col justify-center items-center ${isMaximized ? "max-h-[100dvh]" : ""}`}>
           <div className={`flex flex-col max-h-[75vh] overflow-y-auto ${isMaximized ? "max-h-[100dvh]" : ""}`}>
             <img src={resumePageOne} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain" alt="Resume Picture" />
-            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain pt-2" alt="Resume Picture" />
+            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain mb-[3.5rem] " alt="Resume Picture" />
           </div>
         </div>
       </div>
