@@ -81,10 +81,7 @@ export function DesktopPage() {
           setMenuPos({ x: e.pageX, y: e.pageY })
         }}
       >
-        <section
-          className="flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 py-6"
-          style={{ height: 'calc(100vh - 3.5rem)' }}
-        >
+        <section className="flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 py-6">
           {desktopItems.map((item, index) => (
             <button
               ref={(el) => { iconRef.current[index] = el }}
@@ -119,7 +116,7 @@ export function DesktopPage() {
         {openIndex !== null && desktopItems[openIndex] && (() => {
           const PageComponent = desktopItems[openIndex].component
           return (
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit h-fit mt-[2rem]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit h-fit">
               <PageComponent
                 item={desktopItems[openIndex]}
                 onClose={() => setOpenLabel(null)}
