@@ -34,10 +34,10 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
           <a href={resumePdf} download="Mihailo-Djurovic.pdf" className="dual-border mr-2 p-1 text-lg">Download</a>
           <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="dual-border p-1 text-lg">Open in a new tab</a>
         </div>
-        <div className="bg-black flex flex-1 flex-col justify-center items-center">
+        <div className={`bg-black flex flex-1 flex-col justify-center items-center ${isMaximized ? "max-h-[100dvh]" : ""}`}>
           <div className={`flex flex-col max-h-[75vh] overflow-y-auto ${isMaximized ? "max-h-[100dvh]" : ""}`}>
             <img src={resumePageOne} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain" alt="Resume Picture" />
-            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[95vh] max-w-full h-auto w-auto object-contain pt-2" alt="Resume Picture" />
+            <img src={resumePageTwo} loading="lazy" className="lg:max-h-[75vh] max-h-[85vh] max-w-full h-auto w-auto object-contain pt-2" alt="Resume Picture" />
           </div>
         </div>
       </div>
