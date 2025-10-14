@@ -82,7 +82,7 @@ export function DesktopPage() {
         }}
       >
         <section
-          className="flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 pt-6"
+          className="flex flex-col flex-wrap max-h-screen content-start overflow-auto px-4 py-6"
           style={{ height: 'calc(100vh - 3.5rem)' }}
         >
           {desktopItems.map((item, index) => (
