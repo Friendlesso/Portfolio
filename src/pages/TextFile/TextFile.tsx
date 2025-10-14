@@ -3,7 +3,7 @@ import { useMaximizable } from "../../hooks/useMaximizable.ts";
 import TextFilePng from "../../assets/images/icons/text_file.svg"
 import { FileMenuBar } from "../../components/FileMenuBar.tsx";
 import { useEffect, useState } from "react";
-interface TextFileProps {
+export interface TextFileProps {
   fileId: string;
   onClose: () => void
   label: string

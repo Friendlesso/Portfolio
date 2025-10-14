@@ -1,7 +1,7 @@
-import dayjs from "dayjs";
+import dayjs, { Dayjs } from "dayjs";
 
 
-export function generateMonth(year,month) {
+export function generateMonth(year:number,month:number) {
   const startOfMonth = dayjs(`${year}-${month}-01`);
   const daysInMonth = startOfMonth.daysInMonth();
 
@@ -12,11 +12,11 @@ export function generateMonth(year,month) {
   return daysArray
 }
 
-export function getStartOffset(year,month) {
+export function getStartOffset(year:number,month:number) {
   const startOfMonth = dayjs(`${year}-${month}-01`);
   return startOfMonth.day();
 }
 
-export function isToday(date) {
+export function isToday(date: Dayjs) {
   return date.isSame(dayjs(), "day");
 }
