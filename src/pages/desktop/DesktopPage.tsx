@@ -119,8 +119,7 @@ export function DesktopPage() {
         {openIndex !== null && desktopItems[openIndex] && (() => {
           const PageComponent = desktopItems[openIndex].component
           return (
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit h-fit"
-            style={{marginTop: `calc(var(--safe-top) + 1rem)`, marginBottom: `calc(var(--safe-bottom) + 1rem)`}}>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-fit h-fit mt-[1rem]">
               <PageComponent
                 item={desktopItems[openIndex]}
                 onClose={() => setOpenLabel(null)}
