@@ -5,6 +5,7 @@ import { TextFile } from '../TextFile/TextFile'
 import type { TextFileProps } from '../TextFile/TextFile'
 import { ContextMenu } from '../../components/ContextMenu/ContextMenu'
 import TextFilePng from '../../assets/images/icons/text_file.svg'
+import { useMaximizable } from '../../hooks/useMaximizable'
 
 export function DesktopPage() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
@@ -19,6 +20,9 @@ export function DesktopPage() {
   const [iconSize, setIconSize] = useState<"small" | "medium" | "large">(
     () => (sessionStorage.getItem("iconSize") as "small" | "medium" | "large" || "medium")
   );
+
+  //Disable double Click
+  const { isSmallScreen } = useMaximizable();
 
   useEffect(() => {
     sessionStorage.setItem("iconSize", iconSize);
@@ -90,10 +94,21 @@ export function DesktopPage() {
               ref={(el) => { iconRef.current[index] = el }}
               key={index}
               className={`flex flex-col items-center mb-6 w-15 cursor-pointer ${selectedIndex === index ? "bg-blue-700" : ""}`}
-              onClick={() => setSelectedIndex(index)}
+
+              onClick={() => {
+                if (isSmallScreen) {
+                  handleOpenItem(item.label)
+                } else {
+                  setSelectedIndex(index)
+                }
+
+              }}
+
               onDoubleClick={() => {
-                handleOpenItem(item.label)
-                setSelectedIndex(null)
+                if (!isSmallScreen) {
+                  handleOpenItem(item.label)
+                  setSelectedIndex(null)
+                }
               }}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
