@@ -86,7 +86,7 @@ export function DesktopPage() {
         }}
       >
         <section
-          className="flex-1 relative flex flex-col flex-wrap content-start px-4 pt-6"
+          className="flex-1 relative flex flex-col flex-wrap content-start gap-x-8 px-4 pt-6"
           style={{ height: 'calc(100dvh - 3.5rem)' }}
         >
           {desktopItems.map((item, index) => (
