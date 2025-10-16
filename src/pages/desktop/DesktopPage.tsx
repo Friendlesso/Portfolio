@@ -101,7 +101,6 @@ export function DesktopPage() {
                 } else {
                   setSelectedIndex(index)
                 }
-
               }}
 
               onDoubleClick={() => {
