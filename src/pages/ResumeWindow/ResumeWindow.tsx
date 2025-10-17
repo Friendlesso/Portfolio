@@ -31,7 +31,7 @@ export function ResumeWindow({ item, onClose }: ResumePageProps) {
       />
       <div className="flex-1 flex flex-col">
         <div className="bg-[var(--folder-box-color)] p-1">
-          <a href={resumePdf} download="Mihailo-Djurovic.pdf" className="dual-border mr-2 p-1 text-lg">Download</a>
+          <a href={resumePdf} download="MihailoDjurovic-Resume.pdf" className="dual-border mr-2 p-1 text-lg">Download</a>
           <a href={resumePdf} target="_blank" rel="noopener noreferrer" className="dual-border p-1 text-lg">Open in a new tab</a>
         </div>
         <div className={`bg-black flex flex-1 flex-col justify-center items-center ${isMaximized ? "max-h-[100dvh]" : ""}`}>
